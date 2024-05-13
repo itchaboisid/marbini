@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/png" href="images/logo.png"/>
+    <title>Compatibility Test</title>
+    <link rel="stylesheet" href="assets/css/test.css" />
+    <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+    <style>
+    
+        body{
+            background-image: url(images/Background.jpg);
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+        }
+    </style>
+    </style>
+
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+          <h1>Unified Campus Connection</h1>
+      </div>
+      <ul id="menuList">
+        <li><a href="html/Homepage.html">Home</a></li>
+          <li><a href="html/About Us.html">About</a></li>
+          <li class="admin"><a href="Index.html">Start Test</a></li>
+      </ul>
+      <div class="menu-icon">
+          <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
+      <script>
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+
+        function toggleMenu(){
+            if(menuList.style.maxHeight == "0px")
+            {
+                menuList.style.maxHeight = "300px";
+            }
+            else{
+                menuList.style.maxHeight = "0px";
+            }
+        }
+        
+    </script>
+  </nav>
+  
+    <div class="welcome">
+      <img class="header-image" src="images/welcome.jpg" alt="header image" />
+      <div class="start-test" onclick="startTest()">Start test</div>
+    </div>
+
+    <div class="container">
+      <div class="question-container">
+        <div id="question-count">Question <span id="counter"></span>/10</div>
+        <div id="question"></div>
+        <div class="ans" id="div-ans-a" onclick="selectedAnswer(0)">
+          <span class="my-alpha">A</span><span id="ans-a"></span>
+        </div>
+        <div class="ans" id="div-ans-b" onclick="selectedAnswer(1)">
+          <span class="my-alpha">B</span><span id="ans-b"></span>
+        </div>    
+        <div class="ans" id="div-ans-c" onclick="selectedAnswer(2)">
+          <span class="my-alpha">C</span><span id="ans-c"></span>
+        </div>
+        <div class="ans" id="div-ans-d" onclick="selectedAnswer(3)">
+          <span class="my-alpha">D</span><span id="ans-d"></span>
+        </div>
+        <div class="btn">
+          <div id="previous" onclick="previousQuestion()">< Previous</div>
+          <div id="next" onclick="nextQuestion()">Next Question></div>
+
+        </div>
+
+        <div id="test-result">
+          <img src="#" id="image" />
+          <div id="trait">
+            <strong id="trait-title"></strong> <br />
+            <div>Your personalities traits includes:</div>
+            <ul id="personalities"></ul>
+          </div>
+          <div class="btn">
+
+            <div id="finish" style="display: none;"><a id="finish-link" href="html/Homepage.html">Finish</a></div>
+          </div>
+          <div class="your-answers">
+            <div class="title">Your selected answers.</div>
+            <div id="answers"></div>
+          </div>
+          <div id="restart" onclick="restartQuestion()">Restart</div>
+
+        </div>
+
+     
+      </div>
+      
+      
+    </div>
+
+
+    <script src="assets/script/db.js"></script>
+    <script src="assets/script/script.js"></script>
+  </body>
+</html>
