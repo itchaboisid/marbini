@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+nav{
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #202122;
+    position: relative;
+    height: 70px;
+  }
+  
+  .logo{
+    color: #fff;
+  }
+  
+  nav ul{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    text-align: left;
+  }
+  
+  nav ul li{
+    list-style-type: none;
+  }
+  
+  nav ul li a{
+    text-decoration: none;
+    color: #fff;
+  }
+  nav .admin{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #333;
+    background: #ffffff56;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  .menu-icon{
+    display: none;
+  }
+  
+  .menu-icon i{
+    color: #fff;
+    font-size: 30px;
+  }
+  
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.header-image{
+    width: 40%;
+    margin-top: 70px;
+    border-radius: 40px;
+}
+
+.start-test{
+    margin-top: 50px;
+    background: rgba(36, 34, 32, 0.788);
+    color: rgb(255, 252, 252);
+    font-size: 33px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.start-test:hover{
+    background-color: rgba(107, 106, 105, 0.685);
+}
+
+.container{
+    display: none;
+    flex-direction: row;
+}
+
+.question-container{
+    margin: 100px;
+    width: 100%;
+    border-radius: 20px;
+
+
+}
+
+#question-count{
+    font-weight: bold;
+    font-size: 25px;
+    
+}
+
+#question{
+    color: white;
+    font-weight: 900;
+    margin-top: 20px;
+    font-size: 26px;
+    background-color: rgba(36, 34, 32, 0.788);
+    padding: 25px;
+    border-radius: 25px;
+
+
+
+}
+
+.ans{
+    color: #fff;
+    margin-top: 20px;
+    background-color: rgba(36, 34, 32, 0.788);
+    padding: 12px 0px 12px 0px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.my-alpha{
+    color: black;
+    font-weight: bold;
+    padding: 12px;
+    background-color: rgba(196, 194, 194, 0.658);
+    margin-right: 10px;
+}
+
+
+
+.btn{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+#previous, #next{
+    color: #fff;
+    background-color: rgba(189, 181, 181, 0.808);
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#finish-link{
+    background: rgba(107, 103, 103, 0.479);
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+}
+#finish-link:hover{
+    background-color: rgba(148, 147, 146, 0.685);
+
+}
+#restart{
+    background: rgba(107, 103, 103, 0.514);
+
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+#restart:hover{
+    background-color: rgba(148, 147, 146, 0.685);
+
+}
+
+.title{
+    font-size: 24px;
+    margin-bottom: 40px;
+    background-color: rgba(61, 60, 60, 0.274);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#test-result {
+    padding-top: 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+    background-color: rgba(36, 34, 32, 0.616);
+    border-radius: 35px;
+    width: 60%;
+    margin: 0 auto; /* Added to center horizontally */
+;}
+
+.your-answers {
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 20px;
+    display: grid;
+    width: 80%;
+
+
+}
+#image{
+    width: 40%;
+    border-radius: 170px;
+    margin-top: 2px;
+}
+
+#trait{
+    color: white;
+    margin-top: 20px;
+}
+
+#trait-title{
+    padding-left: 30px;
+    text-align: center;
+    font-size: 30px;
+}
+
+#trait div{
+    text-align: center;
+
+    margin-top: 20px;
+}
+
+#trait ul{
+    text-align: center;
+
+    margin-top: 20px
+}
+
+#trait ul li{
+    list-style-type: none;
+    text-align: center;
+
+    margin-top: 10px;
+}
+
+/* Extra small devices (phones, 768px and down) */
+@media only screen and (max-width: 868px) {
+    nav {
+        position: relative; /* Change position to relative */
+        z-index: 1000; /* Set a high z-index value */
+        padding: 10px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #202122;
+        height: 70px;
+    }
+    
+    nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: #020202d0;
+        gap: 0;
+        overflow: hidden;
+        z-index: 999; /* Set a z-index value lower than nav */
+    }
+    
+    nav ul li {
+        padding: 25px;
+        padding-top: 5px;
+    }
+    
+    .menu-icon {
+        display: block;
+    }
+    
+    #menuList {
+        transition: all 0.5s;
+    }
+    .container{
+        padding-top: 40px;
+        flex-direction: column;
+        align-items: center;
+        margin: 5px;
+    }
+    .question-container {
+        margin: 20px;
+        width: 80%;
+    }
+    .welcome {
+        width: 100%;
+        margin-top: 150px;
+    }
+    .header-image {
+        width: 80%;
+    }
+    #trait {
+        text-align: center;
+        margin: 20px;
+        width: 80%;
+    }
+    #trait-title {
+        text-align: center;
+        padding-left: 0; /* Remove padding on smaller devices */
+        width: 100%; /* Set width to 100% for responsiveness */
+        font-size: 24px; /* Adjust font size for smaller devices */
+    }
+    #trait div {
+        text-align: center;
+        width: 100%;
+    }
+    #trait ul {
+        text-align: center;
+                width: 100%;
+    }
+    #trait ul li {
+        font-size: 15px; /* Adjust font size for smaller devices */
+
+        text-align: center;
+        margin: 20px;
+        width: 80%;
+    }
+    #test-result {
+        width: 100%;
+    }
+    .your-answers {
+        width: 90%;
+    }
+    .ans{
+        margin-left: 25px;
+        font-size: 17px;
+        line-height: 20px;
+
+        }
+}
+
+    
