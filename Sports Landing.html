@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="images/logo.png"/>
+
+    <style>
+      body{
+        background-image: url(images/Background.jpg);
+        background-size: auto;
+
+      }
+    </style>
+    <title>Page 02</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+          <h1>Unified Campus Connection</h1>
+      </div>
+      <ul id="menuList">
+          <li><a href="Homepage.html">Home</a></li>
+          <li><a href="">About</a></li>
+          <li class="admin"><a href="">Admin</a></li>
+      </ul>
+      <div class="menu-icon">
+          <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
+      <script>
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+
+        function toggleMenu(){
+            if(menuList.style.maxHeight == "0px")
+            {
+                menuList.style.maxHeight = "300px";
+            }
+            else{
+                menuList.style.maxHeight = "0px";
+            }
+        }
+        
+    </script>
+  </nav>
+    <div class="container">
+
+      <div class="container__left">
+        <h1><span>Sports</span> <BR> Club</h1>
+        <div class="container__btn">
+          <a href="Sports Reg.html" class="btn">Register</a>
+        </div>
+      </div>
+      <div class="container__right">
+        <div class="images">
+          <img src="images/Tc Pics/Sports.jpg" alt="tent-1" class="tent-1" />
+          <img src="images/Pr Pics/Sports.jpg" alt="tent-2" class="tent-2" />
+        </div>
+        <div class="content">
+          <h2>Objectives:</h2>
+          <h3>- Ivan Asilo</h3>
+          <p>
+            The Sports Club's dynamic community is dedicated to promoting cooperation, good physical fitness, and sportsmanship. Whether you're a serious athlete or just want to have fun and be active, the club offers a plethora of opportunities to participate in a variety of sports and leisure activities.
+          
+          </p>
+        </div>
+      </div>
+      <div class="location">
+        <A href="Sports Gallery.html">Past Events</A>
+      </div>
+      <div class="socials">
+        <span>
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+        </span>
+        <span>
+          <a href="#"><i class="ri-instagram-line"></i></a>
+        </span>
+        <span>
+          <a href="#"><i class="ri-twitter-fill"></i></a>
+        </span>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

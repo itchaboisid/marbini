@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homepage</title>
+
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="icon" type="image/png" href="images/logo.png"/>
+
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+
+
+  </head>
+
+  <body>
+    <nav>
+      <div class="logo">
+          <h1>Unified Campus Connection</h1>
+      </div>
+      <ul id="menuList">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li class="admin"><a href="">Admin</a></li>
+      </ul>
+      <div class="menu-icon">
+          <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
+      <script>
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+
+        function toggleMenu(){
+            if(menuList.style.maxHeight == "0px")
+            {
+                menuList.style.maxHeight = "300px";
+            }
+            else{
+                menuList.style.maxHeight = "0px";
+            }
+        }
+        
+    </script>
+  </nav>
+
+
+    <section class="main swiper mySwiper">
+      <div class="wrapper swiper-wrapper">
+        <div class="slide swiper-slide">
+          <img src="images/Homepage Back/likha.jpg" alt="" class="image" />
+          <div class="image-data">
+            <span class="text"><span>
+            <h2>
+              <span>Likha</span> <br />
+              Club
+            </h2>
+            <p>Welcome to Likha Club, where creativity takes center stage!<br> Whether you're a musical maestro, a vocal virtuoso,<br> or a dancing dynamo, this is your playground.</p>
+
+            <a href="Likha Landing.html" class="button">About Us</a>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <img src="images/Homepage Back/letrato.jpg" alt="" class="image" />
+          <div class="image-data">
+            <span class="text"></span>
+            <h2>
+              <span>Letrato</span> <br />
+              Club
+            </h2>
+            <p>Welcome to Letrato Club, where creativity takes center stage <br>in the world of visual arts! Whether you're an aspiring photographer,<br> a skilled painter, or a budding graphic designer, this is your canvas.</p>
+
+            <a href="Letrato Landing.html" class="button">About Us</a>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <img src="images/Homepage Back/amba.jpg" alt="" class="image" />
+          <div class="image-data">
+            <span class="text"></span>
+            <h2>
+              <span>Ambassadors</span> <br />
+              Club
+            </h2>
+            <p>Welcome to the Ambassador Club, where future diplomats and global leaders <br> find their footing in the world of diplomacy and effective communication.<br> Through immersive workshops, seminars, and realistic simulations!</p>
+
+            <a href="Ambassador Landing.html" class="button">About Us</a>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <img src="images/Homepage Back/Abac.jpg" alt="" class="image" />
+          <div class="image-data">
+            <span class="text"></span>
+            <h2>
+              <span>Abacus</span> <br />
+              Club
+            </h2>
+            <p>Welcome to the Abacus Club, where we foster a deep understanding and <br> mastery of computer technologies.  Whether you're embarking on your tech<br> journey  or seeking  to delve into advanced concepts, our inclusive<br> community provides the perfect platform!</p>
+
+            <a href="Abacus Landing.html" class="button">About Us</a>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <img src="images/Homepage Back/sports.jpg" alt="" class="image" />
+          <div class="image-data">
+            <span class="text"></span>
+            <h2>
+              <span>Sports</span> <br />
+              Club
+            </h2>
+            <p>Step right up to the dynamic world of Sports Club, where sports aren't just a<br> pastime  they're a way of life! Whether you're a rookie eager to hit the ground<br> running or a seasoned pro looking for your next challenge,<br> we've got you covered</p>
+
+            <a href="Sports Landing.html" class="button">About Us</a>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <img src="images/Homepage Back/math.jpg" alt="" class="image" />
+          <div class="image-data">
+            <span class="text"></span>
+            <h2>
+              <span>Math</span> <br />
+              Club
+            </h2>
+            <p>Welcome to the Math Club, where numbers come alive and mathematicians<br> thrive!Whether you're captivated by algebra's logic, calculus's elegance,<br> or geometry's precision, our club is your haven!</p>
+
+            <a href="Math Landing.html" class="button">About Us</a>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <img src="images/Homepage Back/scie.jpg" alt="" class="image" />
+          <div class="image-data">
+            <span class="text"></span>
+            <h2>
+              <span>Science</span> <br />
+              Club
+            </h2>
+            <p>Welcome to the Science Club, where curiosity knows no bounds and discovery <br> is a journey we embark on together. From the microscopic intricacies of cells to <br> the cosmic wonders of galaxies, we delve into the vast realms of biology,<br> chemistry, physics, and beyond.</p>
+
+            <a href="Science Landing.html" class="button">About Us</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-button-next nav-btn"></div>
+      <div class="swiper-button-prev nav-btn"></div>
+      <div class="swiper-pagination"></div>
+    </section>
+
+    <script src="JS/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

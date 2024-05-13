@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" type="image/png" href="images/logo.png"/>
+
+    <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+    <style>
+      body{
+        background-image: url(images/Background.jpg);
+        background-size: auto;
+
+      }
+    </style>
+    <title>Abacus</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+          <h1>Unified Campus Connection</h1>
+      </div>
+      <ul id="menuList">
+          <li><a href="Homepage.html">Home</a></li>
+          <li><a href="">About</a></li>
+          <li class="admin"><a href="">Admin</a></li>
+      </ul>
+      <div class="menu-icon">
+          <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
+      <script>
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+
+        function toggleMenu(){
+            if(menuList.style.maxHeight == "0px")
+            {
+                menuList.style.maxHeight = "300px";
+            }
+            else{
+                menuList.style.maxHeight = "0px";
+            }
+        }
+        
+    </script>
+  </nav>
+    <div class="container">
+
+      <div class="container__left">
+        <h1><span>Abacus</span> <BR> Club</h1>
+        <div class="container__btn">
+          <a href="" class="btn">Register</a>
+        </div>
+      </div>
+      <div class="container__right">
+        <div class="images">
+          <img src="images/Tc Pics/Abacus.jpg" alt="tent-1" class="tent-1" />
+          <img src="images/Pr Pics/Abacus.jpg" alt="tent-2" class="tent-2" />
+        </div>
+        <div class="content">
+          <h2>Objectives:</h2>
+          <h3>- Jaypee Lumanog Baldestamon</h3>
+          <p>
+            The Abacus Club is committed to promoting a better understanding and proficiency with computer technologies. The club provides a friendly environment for people of all ability levels, whether you're a beginner hoping to learn basic abilities or an experienced enthusiast looking to explore complex concepts.           
+          </p>
+        </div>
+      </div>
+      <div class="location">
+        <A href="Abacus Galllery.html">Past Events</A>
+      </div>
+      <div class="socials">
+        <span>
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+        </span>
+        <span>
+          <a href="#"><i class="ri-instagram-line"></i></a>
+        </span>
+        <span>
+          <a href="#"><i class="ri-twitter-fill"></i></a>
+        </span>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

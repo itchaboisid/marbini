@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/gallery.css">
+    <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+    <script src="JS/gallery.js" defer></script>
+    <link rel="icon" type="image/png" href="images/logo.png"/>
+
+
+    <style>
+        body{
+            background-image: url(images/Background.jpg);
+            background-size: auto;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+    <nav>
+        <div class="logo">
+            <h1>Unified Campus Connection</h1>
+        </div>
+        <ul id="menuList">
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="">About</a></li>
+            <li class="admin"><a href="">Admin</a></li>
+        </ul>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+        <script>
+          let menuList = document.getElementById("menuList")
+          menuList.style.maxHeight = "0px";
+  
+          function toggleMenu(){
+              if(menuList.style.maxHeight == "0px")
+              {
+                  menuList.style.maxHeight = "300px";
+              }
+              else{
+                  menuList.style.maxHeight = "0px";
+              }
+          }
+          
+      </script>
+      </header>
+     
+<section>
+    
+      <div class="wrapper">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <div class="carousel">
+          <img src="Clubs Pics/Sports/1.jpg" alt="img" draggable="false">
+          <img src="Clubs Pics/Sports/1.jpg" alt="img" draggable="false">
+          <img src="Clubs Pics/Sports/1.jpg" alt="img" draggable="false">
+          <img src="Clubs Pics/Sports/1.jpg" alt="img" draggable="false">
+          <img src="Clubs Pics/Sports/1.jpg" alt="img" draggable="false">
+          <img src="Clubs Pics/Sports/1.jpg" alt="img" draggable="false">
+          <img src="Clubs Pics/Sports/1.jpg" alt="img" draggable="false">
+          <img src="Clubs Pics/Sports/1.jpg" alt="img" draggable="false">
+          <img src="Clubs Pics/Sports/1.jpg" alt="img" draggable="false">
+        </div>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+      </div>
+    </section>
+      
+    
+</body>
+</html>
