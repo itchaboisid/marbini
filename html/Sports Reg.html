@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title> 
+    <link rel="stylesheet" href="/assets/css/Register.css">
+    <link rel="icon" type="image/png" href="/images/logo.png"/>
+
+    <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+
+    <style>
+        body{
+          background-image: url(/images/Background.jpg);
+          background-size: auto;
+  
+        }
+      </style>
+   </head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Unified Campus Connection</h1>
+        </div>
+        <ul id="menuList">
+          <li><a href="Homepage.html">Home</a></li>
+          <li><a href="About Us.html">About Us</a></li>
+
+          <li class="admin"><a href="/Index.html">Start Test</a></li>
+        </ul>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+        <script>
+          let menuList = document.getElementById("menuList")
+          menuList.style.maxHeight = "0px";
+  
+          function toggleMenu(){
+              if(menuList.style.maxHeight == "0px")
+              {
+                  menuList.style.maxHeight = "300px";
+              }
+              else{
+                  menuList.style.maxHeight = "0px";
+              }
+          }
+          
+      </script>
+    </nav>
+<div class="body">
+    <div class="wrapper">
+        <h2>Registration</h2>
+        <form action="#">
+          <div class="input-box">
+            <input type="text" placeholder="Enter your Firstname" required>
+          </div>
+          <div class="input-box">
+            <input type="text" placeholder="Enter your Surname" required>
+          </div>
+          <div class="input-box">
+            <input type="text" placeholder="Enter your Grade & Section" required>
+          </div>
+          <div class="input-box">
+            <input type="text" placeholder="Reason For Joining" required>
+          </div>
+          <button class="show-modall">Rules & Regulations</button>
+    <div class="bottom-sheett">
+      <div class="sheet-overlayy"></div>
+      <div class="contentt">
+        <div class="headerr">
+          <div class="drag-iconn"><span></span></div>
+        </div>
+        <div class="bodyy">
+          <h2>Rules & Regulations</h2>
+          <li>Respect each other.</li>
+          <li>Attend and participate actively.</li>
+          <li>Work together as a team.</li>
+          <li>Fulfill responsibilities.</li>
+          <li>Behave appropriatelyr</li>
+          <li>Maintain integrity.</li>
+          <li>Engage with the community.</li>
+          <li>Seek growth and improvement.</li>
+         
+        </div>
+      </div>
+    </div>
+         
+         
+          <div class="policy">
+            <input type="checkbox">
+            <h3>I agree to the Club Rules & Condition</h3>
+          </div>
+          <div class="input-box button">
+            <input type="Submit" value="Register Now">
+            <span class="overlay"></span>
+            <div class="modal-box">
+                <i class="fa-regular fa-circle-check"></i>
+                <h2>Completed</h2>
+                <h3>You have succesfully registered!</h3>
+                <div class="buttons">
+                    <a href="Sports Landing.html" class="close">Close</a>
+                </div>
+              </div>
+          </div>
+          <div class="text">
+            <h3>Not Registering? <a href="Sports Landing.html">Back</a></h3>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const button = document.querySelector(".input-box input[type='submit']"),
+                  overlay = document.querySelector(".overlay"),
+                  modalBox = document.querySelector(".modal-box"),
+                  closeBtn = document.querySelector(".close-btn"),
+                  checkbox = document.querySelector('.policy input[type="checkbox"]');
+    
+            // Function to check if all input boxes have a value
+            function checkInputs() {
+                const inputs = document.querySelectorAll('.input-box input[type="text"]');
+                let allFilled = true;
+                inputs.forEach(input => {
+                    if (input.value.trim() === '') {
+                        allFilled = false;
+                    }
+                });
+                return allFilled;
+            }
+    
+            // Function to check if the checkbox is checked
+            function isCheckboxChecked() {
+                return checkbox.checked;
+            }
+    
+            // Function to enable/disable the button based on input values and checkbox status
+            function toggleButton() {
+                if (checkInputs() && isCheckboxChecked()) {
+                    button.removeAttribute('disabled');
+                } else {
+                    button.setAttribute('disabled', 'disabled');
+                }
+            }
+    
+            // Check inputs and checkbox status on page load
+            toggleButton();
+    
+            // Check inputs on input change
+            document.querySelectorAll('.input-box input[type="text"]').forEach(input => {
+                input.addEventListener('input', toggleButton);
+            });
+    
+            // Check checkbox status on change
+            checkbox.addEventListener('change', toggleButton);
+    
+            // Handle form submission
+            button.addEventListener("click", function(event) {
+                if (!checkInputs() || !isCheckboxChecked()) {
+                    event.preventDefault();
+                    alert("Please fill in all the fields and agree to the terms.");
+                } else {
+                    modalBox.style.display = "block";
+                    overlay.style.display = "block";
+                }
+            });
+    
+            // Close modal
+            closeBtn.addEventListener("click", function() {
+                modalBox.style.display = "none";
+                overlay.style.display = "none";
+            });
+        });
+    </script>
+
+<script>
+    const showModalBtn = document.querySelector(".show-modall");
+const bottomSheet = document.querySelector(".bottom-sheett");
+const sheetOverlay = bottomSheet.querySelector(".sheet-overlayy");
+const sheetContent = bottomSheet.querySelector(".contentt");
+const dragIcon = bottomSheet.querySelector(".drag-iconn");
+// Global variables for tracking drag events
+let isDragging = false, startY, startHeight;
+// Show the bottom sheet, hide body vertical scrollbar, and call updateSheetHeight
+const showBottomSheet = () => {
+bottomSheet.classList.add("show");
+document.body.style.overflowY = "hidden";
+updateSheetHeight(50);
+}
+const updateSheetHeight = (height) => {
+sheetContent.style.height = `${height}vh`; //updates the height of the sheet content
+// Toggles the fullscreen class to bottomSheet if the height is equal to 100
+bottomSheet.classList.toggle("fullscreen", height === 100);
+}
+// Hide the bottom sheet and show body vertical scrollbar
+const hideBottomSheet = () => {
+bottomSheet.classList.remove("show");
+document.body.style.overflowY = "auto";
+}
+// Sets initial drag position, sheetContent height and add dragging class to the bottom sheet
+const dragStart = (e) => {
+isDragging = true;
+startY = e.pageY || e.touches?.[0].pageY;
+startHeight = parseInt(sheetContent.style.height);
+bottomSheet.classList.add("dragging");
+}
+// Calculates the new height for the sheet content and call the updateSheetHeight function
+const dragging = (e) => {
+if(!isDragging) return;
+const delta = startY - (e.pageY || e.touches?.[0].pageY);
+const newHeight = startHeight + delta / window.innerHeight * 100;
+updateSheetHeight(newHeight);
+}
+// Determines whether to hide, set to fullscreen, or set to default 
+// height based on the current height of the sheet content
+const dragStop = () => {
+isDragging = false;
+bottomSheet.classList.remove("dragging");
+const sheetHeight = parseInt(sheetContent.style.height);
+sheetHeight < 25 ? hideBottomSheet() : sheetHeight > 75 ? updateSheetHeight(100) : updateSheetHeight(50);
+}
+dragIcon.addEventListener("mousedown", dragStart);
+document.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
+dragIcon.addEventListener("touchstart", dragStart);
+document.addEventListener("touchmove", dragging);
+document.addEventListener("touchend", dragStop);
+sheetOverlay.addEventListener("click", hideBottomSheet);
+showModalBtn.addEventListener("click", showBottomSheet);
+</script>
+    
+</body>
+</html>
