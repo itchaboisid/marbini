@@ -208,8 +208,8 @@ nav ul li {
     transition: all 0.5s;
 }
 .image-data P{
-  font-size: 1.1rem;
-  margin: 30px;
+  font-size: 0.9rem;
+  margin: 40px;
   text-align: center;
 
 }
@@ -228,11 +228,67 @@ a.button {
 
 }
 
-@media (max-width: 375px) {
+
+    
+
+  
+
+
+@media (max-width: 964px) {
   .image-data P{
-    font-size: 0.99rem;
-    margin: 30px;
+    font-size: 0.78rem;
+    margin-left: 50px;
+    text-align: center;
+    margin-right: 50px;
+
+  
+  }
+}
+@media (max-width: 600px) {
+  .image-data P{
+    font-size: 0.8rem;
+    margin-left: 20px;
+    margin-right: 20px;
+
     text-align: center;
   
   }
+}
+
+@media (max-width: 500px) {
+  .image-data P{
+    font-size: 1.15rem;
+    margin-left: 40px;
+    text-align: center;
+    margin-right: 40px;
+  
+  }
+}
+
+@media (max-width: 400px) {
+  .image-data P{
+    font-size: 1.1rem;
+    margin-left: 15px;
+    text-align: center;
+    margin-left: 15px;
+}
+}
+
+@media (max-width: 390px) {
+  .image-data P{
+    font-size: 1rem;
+    margin-left: 15px;
+    text-align: center;
+    margin-left: 15px;
+}
+}
+
+
+@media (max-width: 360px) {
+  .image-data P{
+    font-size: 0.9rem;
+    margin-left: 15px;
+    text-align: center;
+    margin-left: 15px;
+}
 }
