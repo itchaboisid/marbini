@@ -300,8 +300,8 @@ nav{
     }
     #trait {
         text-align: center;
-        margin: 20px;
-        width: 80%;
+        margin: 10px;
+        width: 100%;
     }
     #trait-title {
         text-align: center;
@@ -326,9 +326,14 @@ nav{
     }
     #test-result {
         width: 100%;
+
+    }
+    #image{
+        width: 70%;
+        
     }
     .your-answers {
-        width: 90%;
+        width: 110%;
     }
     .ans{
         margin-left: 5px;

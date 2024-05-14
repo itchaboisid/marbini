@@ -209,11 +209,19 @@ nav ul li {
 .image-data P{
   font-size: 1.1rem;
   margin: 30px;
-  justify-content: center;
+  text-align: center;
+}
+.image-data h2 span{
+  font-size: 2.9rem;
+}
+.image-data h2{
+  font-size: 2.5rem;
+  line-height: 3rem;
+
 }
 a.button {
   font-size: 1.1rem;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 }

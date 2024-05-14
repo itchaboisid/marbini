@@ -170,11 +170,11 @@ const questions = [
         cat: "sports",
       },
       {
-        text: "Learn how to do experiments",
+        text: "Learn experiments",
         cat: "science",
       },
       {
-        text: "Get knowledge in mathematics",
+        text: "Learn mathematics",
         cat: "math",
       },
       {
@@ -201,7 +201,7 @@ const questions = [
         cat: "likha",
       },
       {
-        text: "Communicate & help other students",
+        text: "Help other students",
         cat: "ambassadors",
       },
     ],
