@@ -267,6 +267,8 @@ nav{
         gap: 0;
         overflow: hidden;
         z-index: 999; /* Set a z-index value lower than nav */
+        border-radius: 0px 0px 22px 20px;
+
     }
     
     nav ul li {

@@ -188,10 +188,11 @@ nav ul {
     right: 0;
     flex-direction: column;
     text-align: center;
-    background: #020202d0;
+    background: #020202a1;
     gap: 0;
     overflow: hidden;
     z-index: 999; /* Set a z-index value lower than nav */
+    border-radius: 0px 0px 22px 20px;
 }
 
 nav ul li {
@@ -210,6 +211,7 @@ nav ul li {
   font-size: 1.1rem;
   margin: 30px;
   text-align: center;
+
 }
 .image-data h2 span{
   font-size: 2.9rem;
