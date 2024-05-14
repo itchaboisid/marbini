@@ -228,3 +228,11 @@ a.button {
 
 }
 
+@media (max-width: 375px) {
+  .image-data P{
+    font-size: 0.99rem;
+    margin: 30px;
+    text-align: center;
+  
+  }
+}
