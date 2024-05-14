@@ -5,7 +5,7 @@ const questions = [
       "What kind of hobbies would you enjoy in your daily life basis?",
     answers: [
       {
-        text: "Gaming / Any computer activities",
+        text: "Computer Activities",
         cat: "abacus",
       },
       {
@@ -74,19 +74,19 @@ const questions = [
     "What aspect of club involvement appeals to you the most?",
     answers: [
       {
-        text: "Engaging in hands-on technical projects and problem-solving",
+        text: "Problem-solving",
         cat: "abacus",
       },
       {
-        text: "Expressing yourself creatively through performances or artistic creations",
+        text: "Performances",
         cat: "likha",
       },
       {
-        text: "Participating in competitive sports events and fostering team spirit",
+        text: "Competitive Sports",
         cat: "sports",
       },
       {
-        text: "Immersing yourself in visual storytelling and capturing memorable moments",
+        text: "Capturing Moments",
         cat: "letrato",
       },
     ],
@@ -201,7 +201,7 @@ const questions = [
         cat: "likha",
       },
       {
-        text: "Communicate and help other students",
+        text: "Communicate & help other students",
         cat: "ambassadors",
       },
     ],
@@ -212,7 +212,7 @@ const questions = [
     "What aspect of club involvement appeals to you the most?",
     answers: [
       {
-        text: "Helping other people / Volunteer",
+        text: "Volunteer",
         cat: "ambassador",
       },
       {
