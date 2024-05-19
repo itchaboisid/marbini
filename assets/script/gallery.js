@@ -36,6 +36,12 @@ const autoSlide = () => {
     carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
 }
 
+
+setInterval(function() {
+    // Trigger the click event on the right button
+    document.getElementById('right').click();
+}, 7000); 
+
 const dragStart = (e) => {
     // updatating global variables value on mouse down event
     isDragStart = true;
@@ -62,6 +68,8 @@ const dragStop = () => {
     isDragging = false;
     autoSlide();
 }
+
+
 
 carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("touchstart", dragStart);
