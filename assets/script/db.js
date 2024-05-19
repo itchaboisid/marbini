@@ -1,234 +1,132 @@
 const questions = [
   {
     id: 1,
-    question:
-      "What kind of hobbies would you enjoy in your daily life basis?",
+    question: "What kind of activities do you enjoy in your free time?",
     answers: [
-      {
-        text: "Computer Activities",
-        cat: "abacus",
-      },
-      {
-        text: "Dance / Music",
-        cat: "likha",
-      },
-      {
-        text: "Playing Sports",
-        cat: "sports",
-      },
-      {
-        text: "Pictures / Writing",
-        cat: "letrato",
-      },
+      { text: "Programming/Gaming", cat: "abacus" },
+      { text: "Dancing/Music", cat: "likha" },
+      { text: "Sports/Workout", cat: "sports" },
+      { text: "Photography/Writing", cat: "letrato" },
+      { text: "Science/Nature", cat: "science" },
+      { text: "Community Service/Leadership", cat: "ambassadors" },
+      { text: "Math/Puzzles", cat: "math" },
     ],
   },
   {
     id: 2,
-    question:
-    "Which subject do you prefer in these choices?",
+    question: "Which subject do you find most interesting at school?",
     answers: [
-      {
-        text: "Science",
-        cat: "science",
-      },
-      {
-        text: "Math",
-        cat: "math",
-      },
-      {
-        text: "Mapeh",
-        cat: "likha",
-      },
-      {
-        text: "ESP",
-        cat: "ambassadors",
-      },
+      { text: "IT/Computer Science", cat: "abacus" },
+      { text: "Music/Art", cat: "likha" },
+      { text: "Physical Education", cat: "sports" },
+      { text: "Math/Geometry", cat: "math" },
+      { text: "Biology/Chemistry", cat: "science" },
+      { text: "Social Studies/History", cat: "ambassadors" },
+      { text: "Photography/Visual Arts", cat: "letrato" },
     ],
   },
   {
     id: 3,
-    question:
-    "What kind of hobbies would you enjoy in your daily life basis?",
+    question: "How do you prefer to solve problems?",
     answers: [
-      {
-        text: "Experiments",
-        cat: "science",
-      },
-      {
-        text: "Learn Computations",
-        cat: "math",
-      },
-      {
-        text: "Coding ",
-        cat: "abacus",
-      },
-      {
-        text: "Helping out other people",
-        cat: "ambassadors",
-      },
+      { text: "Technology/Innovation", cat: "abacus" },
+      { text: "Creatively/Arts", cat: "likha" },
+      { text: "Physical Activity/Teamwork", cat: "sports" },
+      { text: "Logically/Mathematically", cat: "math" },
+      { text: "Scientifically", cat: "science" },
+      { text: "Empathizing/Perspectives", cat: "ambassadors" },
+      { text: "Analyzing Patterns", cat: "abacus" },
     ],
   },
   {
     id: 4,
-    question:
-    "What aspect of club involvement appeals to you the most?",
+    question: "What kind of extracurricular event would you most like to participate in?",
     answers: [
-      {
-        text: "Problem-solving",
-        cat: "abacus",
-      },
-      {
-        text: "Performances",
-        cat: "likha",
-      },
-      {
-        text: "Competitive Sports",
-        cat: "sports",
-      },
-      {
-        text: "Capturing Moments",
-        cat: "letrato",
-      },
+      { text: "Hackathon/Coding", cat: "abacus" },
+      { text: "Talent Show/Theater", cat: "likha" },
+      { text: "Sports Tournament", cat: "sports" },
+      { text: "Science Fair", cat: "science" },
+      { text: "Community Program", cat: "ambassadors" },
+      { text: "Photo Exhibition", cat: "letrato" },
+      { text: "Math Olympiad", cat: "math" },
     ],
   },
   {
     id: 5,
-    question:
-    "Which subject do you prefer in these choices?",
+    question: "Which activity sounds most appealing to you?",
     answers: [
-      {
-        text: "TLE (Computer)",
-        cat: "abacus",
-      },
-      {
-        text: "Physical Education",
-        cat: "sports",
-      },
-      {
-        text: "Araling Panlipunan",
-        cat: "ambassadors",
-      },
-      {
-        text: "Filipino",
-        cat: "letrato",
-      },
+      { text: "Designing a Website/App", cat: "abacus" },
+      { text: "Performing on Stage", cat: "likha" },
+      { text: "Playing Sports", cat: "sports" },
+      { text: "Conducting Experiments", cat: "science" },
+      { text: "Volunteering", cat: "ambassadors" },
+      { text: "Capturing Moments", cat: "letrato" },
+      { text: "Solving Equations", cat: "math" },
     ],
   },
   {
     id: 6,
-    question:
-    "How do you cope up with stress?",
+    question: "What would you like to achieve through a club?",
     answers: [
-      {
-        text: "Playing sports",
-        cat: "sports",
-      },
-      {
-        text: "Music / Dance",
-        cat: "likha",
-      },
-      {
-        text: "Poetry",
-        cat: "letrato",
-      },
-      {
-        text: "Solving Math Problem",
-        cat: "math",
-      },
+      { text: "Tech Skills", cat: "abacus" },
+      { text: "Creative Skills", cat: "likha" },
+      { text: "Physical Fitness", cat: "sports" },
+      { text: "Scientific Knowledge", cat: "science" },
+      { text: "Social Awareness", cat: "ambassadors" },
+      { text: "Visual Arts", cat: "letrato" },
+      { text: "Problem-Solving", cat: "math" },
     ],
   },
   {
     id: 7,
-    question:
-    "How do you cope up with stress? ",
+    question: "Which project would you most enjoy working on?",
     answers: [
-      {
-        text: "Playing online games",
-        cat: "abacus",
-      },
-      {
-        text: "Helping others",
-        cat: "ambassador",
-      },
-      {
-        text: "Experiment on things",
-        cat: "science",
-      },
-      {
-        text: "Playing sports",
-        cat: "sports",
-      },
+      { text: "Digital Game/Software", cat: "abacus" },
+      { text: "Talent Show/Event", cat: "likha" },
+      { text: "Sports Event", cat: "sports" },
+      { text: "Model/Research", cat: "science" },
+      { text: "Community Campaign", cat: "ambassadors" },
+      { text: "Portraits/Landscapes", cat: "letrato" },
+      { text: "Math Concepts", cat: "math" },
     ],
   },
   {
     id: 8,
-    question:
-    "What is a new experience you've always wanted to try?",
+    question: "How do you usually spend your weekends?",
     answers: [
-      {
-        text: "Learn physical activities",
-        cat: "sports",
-      },
-      {
-        text: "Learn experiments",
-        cat: "science",
-      },
-      {
-        text: "Learn mathematics",
-        cat: "math",
-      },
-      {
-        text: "Photography",
-        cat: "letrato",
-      },
+      { text: "Tech/Gaming", cat: "abacus" },
+      { text: "Music/Dance", cat: "likha" },
+      { text: "Sports/Exercise", cat: "sports" },
+      { text: "Photos of Nature", cat: "letrato" },
+      { text: "Science Museums", cat: "science" },
+      { text: "Volunteer Work", cat: "ambassadors" },
+      { text: "Puzzles/Brain Teasers", cat: "math" },
     ],
   },
   {
     id: 9,
-    question:
-    "What is a new experience you've always wanted to try?",
+    question: "What do you enjoy discussing with friends?",
     answers: [
-      {
-        text: "Play competitive sports",
-        cat: "sports",
-      },
-      {
-        text: "Making a game",
-        cat: "abacus",
-      },
-      {
-        text: "Perform in a stage",
-        cat: "likha",
-      },
-      {
-        text: "Help other students",
-        cat: "ambassadors",
-      },
+      { text: "Tech Trends", cat: "abacus" },
+      { text: "Music/Art Projects", cat: "likha" },
+      { text: "Sports Teams", cat: "sports" },
+      { text: "Science Facts", cat: "science" },
+      { text: "Social Issues", cat: "ambassadors" },
+      { text: "Photo Techniques", cat: "letrato" },
+      { text: "Math Problems", cat: "math" },
     ],
   },
   {
     id: 10,
-    question:
-    "What aspect of club involvement appeals to you the most?",
+    question: "Which of these experiences excites you the most?",
     answers: [
-      {
-        text: "Volunteer",
-        cat: "ambassador",
-      },
-      {
-        text: "Solving math problems",
-        cat: "math",
-      },
-      {
-        text: "Experimenting new things",
-        cat: "science",
-      },
-      {
-        text: "Playing online games",
-        cat: "abacus",
-      },
+      { text: "Tech Workshop", cat: "abacus" },
+      { text: "Music/Dance Recital", cat: "likha" },
+      { text: "Sports Championship", cat: "sports" },
+      { text: "Science Museum", cat: "science" },
+      { text: "Community Outreach", cat: "ambassadors" },
+      { text: "Photo Expedition", cat: "letrato" },
+      { text: "Math Competition", cat: "math" },
     ],
   },
 ];
-
-module.exports = questions;

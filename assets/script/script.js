@@ -54,6 +54,9 @@ const resetPreviousStyles = () => {
   document.getElementById("div-ans-b").style.border = "none";
   document.getElementById("div-ans-c").style.border = "none";
   document.getElementById("div-ans-d").style.border = "none";
+  document.getElementById("div-ans-e").style.border = "none";
+  document.getElementById("div-ans-f").style.border = "none";
+  document.getElementById("div-ans-g").style.border = "none";
 };
 
 const displaySelectedAnswer = (answer) => {
@@ -63,8 +66,17 @@ const displaySelectedAnswer = (answer) => {
     document.getElementById("div-ans-b").style.border = "2.5px solid white";
   } else if (answer === 2) {
     document.getElementById("div-ans-c").style.border = "2.5px solid white";
-  } else {
+  }
+  else if (answer === 3) {
     document.getElementById("div-ans-d").style.border = "2.5px solid white";
+  }
+  else if (answer === 4) {
+    document.getElementById("div-ans-e").style.border = "2.5px solid white";
+  }
+  else if (answer === 5) {
+    document.getElementById("div-ans-f").style.border = "2.5px solid white";
+  } else {
+    document.getElementById("div-ans-g").style.border = "2.5px solid white";
   }
 };
 
@@ -74,6 +86,10 @@ const displayQuestion = (questionObj) => {
   document.getElementById("ans-b").innerHTML = questionObj.answers[1].text;
   document.getElementById("ans-c").innerHTML = questionObj.answers[2].text;
   document.getElementById("ans-d").innerHTML = questionObj.answers[3].text;
+  document.getElementById("ans-e").innerHTML = questionObj.answers[4].text;
+  document.getElementById("ans-f").innerHTML = questionObj.answers[5].text;
+  document.getElementById("ans-g").innerHTML = questionObj.answers[6].text;
+
 
   //enable previous button if there's a previous question
   if (questionIndex > 0) {
@@ -183,44 +199,149 @@ const showElement = (questionObj, chosenAnswer, index) => {
         <div class="ans" id="div-ans-c">
           <span class="my-alpha">C</span><span id="ans-c">${questionObj.answers[2].text}</span>
         </div>
-        <div class="ans" id="div-ans-d" style="margin-bottom: 40px">
+        <div class="ans" id="div-ans-d">
           <span class="my-alpha">D</span><span id="ans-d">${questionObj.answers[3].text}</span>
+        </div>
+        <div class="ans" id="div-ans-e">
+          <span class="my-alpha">E</span><span id="ans-e">${questionObj.answers[4].text}</span>
+        </div>
+        <div class="ans" id="div-ans-f">
+          <span class="my-alpha">F</span><span id="ans-f">${questionObj.answers[5].text}</span>
+        </div>
+        <div class="ans" id="div-ans-g" style="margin-bottom: 40px">
+          <span class="my-alpha">G</span><span id="ans-g">${questionObj.answers[6].text}</span>
         </div>
         `;
       break;
     case 1:
-      element = `<div id="question-count">Question <span id="counter"></span>${index}/10</div>
-          <div id="question">${questionObj.question}</div>
-          <div class="ans" id="div-ans-a">
-            <span class="my-alpha">A</span><span id="ans-a">${questionObj.answers[0].text}</span>
-          </div>
-          <div class="ans" id="div-ans-b" style="${chosenAnswer === 1 ? 'border: 2px solid white;' : ''}">
-            <span class="my-alpha">B</span><span id="ans-b">${questionObj.answers[1].text}</span>
-          </div>
-          <div class="ans" id="div-ans-c">
-            <span class="my-alpha">C</span><span id="ans-c">${questionObj.answers[2].text}</span>
-          </div>
-          <div class="ans" id="div-ans-d" style="margin-bottom: 40px">
-            <span class="my-alpha">D</span><span id="ans-d">${questionObj.answers[3].text}</span>
-          </div>
-          `;
+      element =`<div id="question-count">Question <span id="counter"></span>${index}/10</div>
+      <div id="question">${questionObj.question}</div>
+      <div class="ans" id="div-ans-a"}">
+        <span class="my-alpha">A</span><span id="ans-a">${questionObj.answers[0].text}</span>
+      </div>
+      <div class="ans" id="div-ans-b" style="${chosenAnswer === 1 ? 'border: 2px solid white;' : ''}">
+      <span class="my-alpha">B</span><span id="ans-b">${questionObj.answers[1].text}</span>
+      </div>
+      <div class="ans" id="div-ans-c">
+        <span class="my-alpha">C</span><span id="ans-c">${questionObj.answers[2].text}</span>
+      </div>
+      <div class="ans" id="div-ans-d">
+        <span class="my-alpha">D</span><span id="ans-d">${questionObj.answers[3].text}</span>
+      </div>
+      <div class="ans" id="div-ans-e">
+        <span class="my-alpha">E</span><span id="ans-e">${questionObj.answers[4].text}</span>
+      </div>
+      <div class="ans" id="div-ans-f">
+        <span class="my-alpha">F</span><span id="ans-f">${questionObj.answers[5].text}</span>
+      </div>
+      <div class="ans" id="div-ans-g" style="margin-bottom: 40px">
+        <span class="my-alpha">G</span><span id="ans-g">${questionObj.answers[6].text}</span>
+      </div>
+      `;
       break;
     case 2:
       element = `<div id="question-count">Question <span id="counter"></span>${index}/10</div>
-        <div id="question">${questionObj.question}</div>
+      <div id="question">${questionObj.question}</div>
         <div class="ans" id="div-ans-a">
-          <span class="my-alpha">A</span><span id="ans-a">${questionObj.answers[0].text}</span>
-        </div>
-        <div class="ans" id="div-ans-b">
-          <span class="my-alpha">B</span><span id="ans-b">${questionObj.answers[1].text}</span>
-        </div>
-        <div class="ans" id="div-ans-c" style="${chosenAnswer === 2 ? 'border: 2px solid white;' : ''}">
-          <span class="my-alpha">C</span><span id="ans-c">${questionObj.answers[2].text}</span>
-        </div>
-        <div class="ans" id="div-ans-d" style="margin-bottom: 40px">
-          <span class="my-alpha">D</span><span id="ans-d">${questionObj.answers[3].text}</span>
-        </div>
-        `;
+        <span class="my-alpha">A</span><span id="ans-a">${questionObj.answers[0].text}</span>
+      </div>
+      <div class="ans" id="div-ans-b">
+        <span class="my-alpha">B</span><span id="ans-b">${questionObj.answers[1].text}</span>
+      </div>
+      <div class="ans" id="div-ans-c" style="${chosenAnswer === 2 ? 'border: 2px solid white;' : ''}">
+        <span class="my-alpha">C</span><span id="ans-c">${questionObj.answers[2].text}</span>
+      </div>
+      <div class="ans" id="div-ans-d">
+        <span class="my-alpha">D</span><span id="ans-d">${questionObj.answers[3].text}</span>
+      </div>
+      <div class="ans" id="div-ans-e">
+        <span class="my-alpha">E</span><span id="ans-e">${questionObj.answers[4].text}</span>
+      </div>
+      <div class="ans" id="div-ans-f">
+        <span class="my-alpha">F</span><span id="ans-f">${questionObj.answers[5].text}</span>
+      </div>
+      <div class="ans" id="div-ans-g" style="margin-bottom: 40px">
+        <span class="my-alpha">G</span><span id="ans-g">${questionObj.answers[6].text}</span>
+      </div>
+      `;
+      break;
+      case 3:
+      element = `<div id="question-count">Question <span id="counter"></span>${index}/10</div>
+      <div id="question">${questionObj.question}</div>
+      <div class="ans" id="div-ans-a">
+        <span class="my-alpha">A</span><span id="ans-a">${questionObj.answers[0].text}</span>
+      </div>
+      <div class="ans" id="div-ans-b">
+        <span class="my-alpha">B</span><span id="ans-b">${questionObj.answers[1].text}</span>
+      </div>
+      <div class="ans" id="div-ans-c">
+        <span class="my-alpha">C</span><span id="ans-c">${questionObj.answers[2].text}</span>
+      </div>
+      <div class="ans" id="div-ans-d" style="${chosenAnswer === 3 ? 'border: 2px solid white;' : ''}">
+        <span class="my-alpha">D</span><span id="ans-d">${questionObj.answers[3].text}</span>
+      </div>
+      <div class="ans" id="div-ans-e">
+        <span class="my-alpha">E</span><span id="ans-e">${questionObj.answers[4].text}</span>
+      </div>
+      <div class="ans" id="div-ans-f">
+        <span class="my-alpha">F</span><span id="ans-f">${questionObj.answers[5].text}</span>
+      </div>
+      <div class="ans" id="div-ans-g" style="margin-bottom: 40px">
+        <span class="my-alpha">G</span><span id="ans-g">${questionObj.answers[6].text}</span>
+      </div>
+      `;
+      break;
+      case 4:
+      element = `<div id="question-count">Question <span id="counter"></span>${index}/10</div>
+      <div id="question">${questionObj.question}</div>
+      <div class="ans" id="div-ans-a">
+        <span class="my-alpha">A</span><span id="ans-a">${questionObj.answers[0].text}</span>
+      </div>
+      <div class="ans" id="div-ans-b">
+        <span class="my-alpha">B</span><span id="ans-b">${questionObj.answers[1].text}</span>
+      </div>
+      <div class="ans" id="div-ans-c">
+        <span class="my-alpha">C</span><span id="ans-c">${questionObj.answers[2].text}</span>
+      </div>
+      <div class="ans" id="div-ans-d">
+        <span class="my-alpha">D</span><span id="ans-d">${questionObj.answers[3].text}</span>
+      </div>
+      <div class="ans" id="div-ans-e" style="${chosenAnswer === 4 ? 'border: 2px solid white;' : ''}">
+        <span class="my-alpha">E</span><span id="ans-e">${questionObj.answers[4].text}</span>
+      </div>
+      <div class="ans" id="div-ans-f">
+        <span class="my-alpha">F</span><span id="ans-f">${questionObj.answers[5].text}</span>
+      </div>
+      <div class="ans" id="div-ans-g" style="margin-bottom: 40px">
+        <span class="my-alpha">G</span><span id="ans-g">${questionObj.answers[6].text}</span>
+      </div>
+      `;
+      break;
+      case 5:
+      element = `<div id="question-count">Question <span id="counter"></span>${index}/10</div>
+      <div id="question">${questionObj.question}</div>
+      <div class="ans" id="div-ans-a">
+        <span class="my-alpha">A</span><span id="ans-a">${questionObj.answers[0].text}</span>
+      </div>
+      <div class="ans" id="div-ans-b">
+        <span class="my-alpha">B</span><span id="ans-b">${questionObj.answers[1].text}</span>
+      </div>
+      <div class="ans" id="div-ans-c">
+        <span class="my-alpha">C</span><span id="ans-c">${questionObj.answers[2].text}</span>
+      </div>
+      <div class="ans" id="div-ans-d">
+        <span class="my-alpha">D</span><span id="ans-d">${questionObj.answers[3].text}</span>
+      </div>
+      <div class="ans" id="div-ans-e">
+        <span class="my-alpha">E</span><span id="ans-e">${questionObj.answers[4].text}</span>
+      </div>
+      <div class="ans" id="div-ans-f" style="${chosenAnswer === 5 ? 'border: 2px solid white;' : ''}">
+        <span class="my-alpha">F</span><span id="ans-f">${questionObj.answers[5].text}</span>
+      </div>
+      <div class="ans" id="div-ans-g" style="margin-bottom: 40px">
+        <span class="my-alpha">G</span><span id="ans-g">${questionObj.answers[6].text}</span>
+      </div>
+      `;
       break;
     default:
       element = `<div id="question-count">Question <span id="counter"></span>${index}/10</div>
@@ -234,8 +355,17 @@ const showElement = (questionObj, chosenAnswer, index) => {
         <div class="ans" id="div-ans-c">
           <span class="my-alpha">C</span><span id="ans-c">${questionObj.answers[2].text}</span>
         </div>
-        <div class="ans" id="div-ans-d" style="margin-bottom: 40px; ${chosenAnswer === 3 ? 'border: 2px solid white;' : ''}">
+        <div class="ans" id="div-ans-d">
           <span class="my-alpha">D</span><span id="ans-d">${questionObj.answers[3].text}</span>
+        </div>
+        <div class="ans" id="div-ans-e">
+          <span class="my-alpha">E</span><span id="ans-e">${questionObj.answers[4].text}</span>
+        </div>
+        <div class="ans" id="div-ans-f">
+          <span class="my-alpha">F</span><span id="ans-f">${questionObj.answers[5].text}</span>
+        </div>
+        <div class="ans" id="div-ans-g" style="margin-bottom: 40px; ${chosenAnswer === 6 ? 'border: 2px solid white;' : ''}">
+          <span class="my-alpha">G</span><span id="ans-g">${questionObj.answers[6].text}</span>
         </div>
         `;
       // Repeat for other cases (2, 3, 4, 5, 6)
@@ -301,6 +431,9 @@ const showAllQuestionAndAnswer = () => {
   document.querySelector('#div-ans-b').style.display = 'none';
   document.querySelector('#div-ans-c').style.display = 'none';
   document.querySelector('#div-ans-d').style.display = 'none';
+  document.querySelector('#div-ans-e').style.display = 'none';
+  document.querySelector('#div-ans-f').style.display = 'none';
+  document.querySelector('#div-ans-g').style.display = 'none';
 
   // Show the test result and the preview of selected answers
   document.getElementById("next").style.display = "none";

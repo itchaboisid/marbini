@@ -18,7 +18,15 @@ nav{
   }
   
   .logo{
+    color: #333;
+    font-size: x-large;
+    text-decoration: none; 
+  }
+  .logo .log {
+    font-weight: 900;
     color: #fff;
+    text-decoration: none;
+
   }
   
   nav ul{
@@ -94,6 +102,7 @@ nav{
 }
 
 #question-count{
+    
     font-weight: bold;
     font-size: 25px;
     
@@ -117,7 +126,7 @@ nav{
     color: #fff;
     margin-top: 20px;
     background-color: rgba(36, 34, 32, 0.788);
-    padding: 12px 0px 12px 0px;
+    padding: 8px 0px 8px 0px;
     cursor: pointer;
     border-radius: 20px;
 
@@ -283,8 +292,21 @@ nav{
     #menuList {
         transition: all 0.5s;
     }
+    #question {
+        color: white;
+    font-weight: 900;
+    margin-top: 20px;
+    font-size: 17px;
+    background-color: rgba(36, 34, 32, 0.788);
+    padding: 25px;
+    border-radius: 25px;
+
+    }
+    #question-count{
+        font-size: 18px;
+    }
     .container{
-        padding-top: 40px;
+        padding-top: 5px;
         flex-direction: column;
         align-items: center;
         margin: 5px;
@@ -320,11 +342,14 @@ nav{
                 width: 100%;
     }
     #trait ul li {
-        font-size: 15px; /* Adjust font size for smaller devices */
+        font-size: 13px; /* Adjust font size for smaller devices */
+        margin-bottom: 20px;
 
         text-align: center;
-        margin: 20px;
-        width: 80%;
+        margin-left: 20px;
+        margin-right: 20px;
+
+        width: 85%;
     }
     #test-result {
         width: 100%;
@@ -338,15 +363,18 @@ nav{
         width: 110%;
     }
     .ans{
+
         margin-left: 5px;
-        font-size: 17px;
-        line-height: 37px;
+        font-size: 11px;
+        line-height: 30px;
 
         }
     .ans .my-alpha{
         margin-left: 0;
-        width: 80px;
-        border-radius: 13px 0px 0px 13px;
+        width: 10px;
+        border-radius: 20px 0px 0px 20px;
+        padding: 15.5px;
+
     }
     .btn{
         font-size: 15px;
@@ -359,6 +387,11 @@ nav{
         width: 90%;
         margin: 20px;
     }
+    div .title{
+        align-items: center;
+        font-size: 22px;
+    }
+    
 }
 
     
