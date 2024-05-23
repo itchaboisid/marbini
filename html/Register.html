@@ -60,9 +60,8 @@
             <input type="text" placeholder="Enter your Grade & Section" required>
           </div>
           <div class="input-box">
-            <input type="text" placeholder="Reason For Joining" required>
+            <input type="text" placeholder="Email" required>
           </div>
-
           <button class="show-modall">Rules & Regulations</button>
     <div class="bottom-sheett">
       <div class="sheet-overlayy"></div>
@@ -85,7 +84,6 @@
       </div>
     </div>
          
-         
           <div class="policy">
             <input type="checkbox">
             <h3>I agree to the Club Rules & Condition</h3>
@@ -98,12 +96,12 @@
                 <h2>Completed</h2>
                 <h3>You have succesfully registered!</h3>
                 <div class="buttons">
-                    <a href="Science Landing.html" class="close">Close</a>
+                    <a href="Abacus Landing.html" class="close">Close</a>
                 </div>
               </div>
           </div>
           <div class="text">
-            <h3>Not Registering? <a href="Science Landing.html">Back</a></h3>
+            <h3>Not Registering? <a href="Abacus Landing.html">Back</a></h3>
           </div>
         </form>
       </div>
@@ -171,8 +169,9 @@
             });
         });
     </script>
-    <script>
-        const showModalBtn = document.querySelector(".show-modall");
+
+<script>
+    const showModalBtn = document.querySelector(".show-modall");
 const bottomSheet = document.querySelector(".bottom-sheett");
 const sheetOverlay = bottomSheet.querySelector(".sheet-overlayy");
 const sheetContent = bottomSheet.querySelector(".contentt");
@@ -181,41 +180,41 @@ const dragIcon = bottomSheet.querySelector(".drag-iconn");
 let isDragging = false, startY, startHeight;
 // Show the bottom sheet, hide body vertical scrollbar, and call updateSheetHeight
 const showBottomSheet = () => {
-    bottomSheet.classList.add("show");
-    document.body.style.overflowY = "hidden";
-    updateSheetHeight(50);
+bottomSheet.classList.add("show");
+document.body.style.overflowY = "hidden";
+updateSheetHeight(50);
 }
 const updateSheetHeight = (height) => {
-    sheetContent.style.height = `${height}vh`; //updates the height of the sheet content
-    // Toggles the fullscreen class to bottomSheet if the height is equal to 100
-    bottomSheet.classList.toggle("fullscreen", height === 100);
+sheetContent.style.height = `${height}vh`; //updates the height of the sheet content
+// Toggles the fullscreen class to bottomSheet if the height is equal to 100
+bottomSheet.classList.toggle("fullscreen", height === 100);
 }
 // Hide the bottom sheet and show body vertical scrollbar
 const hideBottomSheet = () => {
-    bottomSheet.classList.remove("show");
-    document.body.style.overflowY = "auto";
+bottomSheet.classList.remove("show");
+document.body.style.overflowY = "auto";
 }
 // Sets initial drag position, sheetContent height and add dragging class to the bottom sheet
 const dragStart = (e) => {
-    isDragging = true;
-    startY = e.pageY || e.touches?.[0].pageY;
-    startHeight = parseInt(sheetContent.style.height);
-    bottomSheet.classList.add("dragging");
+isDragging = true;
+startY = e.pageY || e.touches?.[0].pageY;
+startHeight = parseInt(sheetContent.style.height);
+bottomSheet.classList.add("dragging");
 }
 // Calculates the new height for the sheet content and call the updateSheetHeight function
 const dragging = (e) => {
-    if(!isDragging) return;
-    const delta = startY - (e.pageY || e.touches?.[0].pageY);
-    const newHeight = startHeight + delta / window.innerHeight * 100;
-    updateSheetHeight(newHeight);
+if(!isDragging) return;
+const delta = startY - (e.pageY || e.touches?.[0].pageY);
+const newHeight = startHeight + delta / window.innerHeight * 100;
+updateSheetHeight(newHeight);
 }
 // Determines whether to hide, set to fullscreen, or set to default 
 // height based on the current height of the sheet content
 const dragStop = () => {
-    isDragging = false;
-    bottomSheet.classList.remove("dragging");
-    const sheetHeight = parseInt(sheetContent.style.height);
-    sheetHeight < 25 ? hideBottomSheet() : sheetHeight > 75 ? updateSheetHeight(100) : updateSheetHeight(50);
+isDragging = false;
+bottomSheet.classList.remove("dragging");
+const sheetHeight = parseInt(sheetContent.style.height);
+sheetHeight < 25 ? hideBottomSheet() : sheetHeight > 75 ? updateSheetHeight(100) : updateSheetHeight(50);
 }
 dragIcon.addEventListener("mousedown", dragStart);
 document.addEventListener("mousemove", dragging);
@@ -225,7 +224,7 @@ document.addEventListener("touchmove", dragging);
 document.addEventListener("touchend", dragStop);
 sheetOverlay.addEventListener("click", hideBottomSheet);
 showModalBtn.addEventListener("click", showBottomSheet);
-    </script>
+</script>
     
 </body>
 </html>
