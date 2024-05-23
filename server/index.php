@@ -1,5 +1,5 @@
 <?php
-require '../vendor/autoload.php';
+require '/vendor/autoload.php';
 
 DB::$user = 'sql12708572';
 DB::$password = 'VJvLZLjbsE';
