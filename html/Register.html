@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title> 
-    <link rel="stylesheet" href="/assets/css/Register.css">
+    <link rel="stylesheet" href="../assets/css/Register.css">
     <link rel="icon" type="image/png" href="/images/logo.png"/>
 
     <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
@@ -51,45 +51,58 @@
         <h2>Registration</h2>
         <form action="#">
           <div class="input-box">
-            <input type="text" placeholder="Enter your Firstname" required>
+            <input type="text" id="fname" placeholder="Enter your Firstname" required>
           </div>
           <div class="input-box">
-            <input type="text" placeholder="Enter your Surname" required>
+            <input type="text" id="sname" placeholder="Enter your Surname" required>
           </div>
           <div class="input-box">
-            <input type="text" placeholder="Enter your Grade & Section" required>
+            <input type="text" id="grade" placeholder="Enter your Grade & Section" required>
           </div>
           <div class="input-box">
-            <input type="text" placeholder="Email" required>
+            <input type="text" id="email" placeholder="Email" required>
+          </div>
+          <div class="input-box">
+            <select id="club">
+                <option selected="" hidden="">Choose a Club</option>
+                <option value="Likha">Likha</option>
+                <option value="Abacus">Abacus</option>
+                <option value="Ambassadors">Ambassadors</option>
+                <option value="Sports">Sports</option>
+                <option value="Letrato">Letrato</option>
+                <option value="Math">Math</option>
+                <option value="Science">Science</option>
+            </select>
           </div>
           <button class="show-modall">Rules & Regulations</button>
-    <div class="bottom-sheett">
-      <div class="sheet-overlayy"></div>
-      <div class="contentt">
-        <div class="headerr">
-          <div class="drag-iconn"><span></span></div>
-        </div>
-        <div class="bodyy">
-          <h2>Rules & Regulations</h2>
-          <li>Respect each other.</li>
-          <li>Attend and participate actively.</li>
-          <li>Work together as a team.</li>
-          <li>Fulfill responsibilities.</li>
-          <li>Behave appropriatelyr</li>
-          <li>Maintain integrity.</li>
-          <li>Engage with the community.</li>
-          <li>Seek growth and improvement.</li>
-         
-        </div>
-      </div>
-    </div>
+          <div class="bottom-sheett">
+            <div class="sheet-overlayy"></div>
+            <div class="contentt">
+              <div class="headerr">
+                <div class="drag-iconn"><span></span></div>
+              </div>
+              <div class="bodyy">
+                <h2>Rules & Regulations</h2>
+                <li>Respect each other.</li>
+                <li>Attend and participate actively.</li>
+                <li>Work together as a team.</li>
+                <li>Fulfill responsibilities.</li>
+                <li>Behave appropriatelyr</li>
+                <li>Maintain integrity.</li>
+                <li>Engage with the community.</li>
+                <li>Seek growth and improvement.</li>
+               
+              </div>
+            </div>
+          </div>
          
           <div class="policy">
-            <input type="checkbox">
+            <input type="checkbox" id="confirm">
             <h3>I agree to the Club Rules & Condition</h3>
           </div>
           <div class="input-box button">
-            <input type="Submit" value="Register Now">
+            <input type="Submit" value="Register Now" style="display: none;">
+            <button id="register" class="btn" type="button">Register Now</button>
             <span class="overlay"></span>
             <div class="modal-box">
                 <i class="fa-regular fa-circle-check"></i>
@@ -106,6 +119,106 @@
         </form>
       </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript">
+      
+
+      $(document).on("click", "#register", (e)=>{
+
+      if ($('#confirm').is(":checked")) {
+
+        let checking = true;
+
+        if ($("#fname").val() == "") {
+            checking = false;
+        }
+        if ($("#sname").val() == "") {
+            checking = false;
+        }
+        if ($("#grade").val() == "") {
+            checking = false;
+        }
+        if ($("#email").val() == "") {
+            checking = false;
+        }
+        if ($("#club").val() == "") {
+            checking = false;
+        }
+
+        if (checking) {
+
+        $.ajax({
+            url:"../server/index.php",
+            type: "POST",
+            dataType: "json",
+            data: {
+              fname: $("#fname").val(),
+              sname: $("#sname").val(),
+              grade_section: $("#grade").val(),
+              email: $("#email").val(),
+              club: $("#club").val(),
+              club_rules_status: $('#confirm').is(":checked")
+            },
+            beforeSend: (e) => {
+            Swal.fire({
+              html: 'Loading...',
+              didOpen: () => {
+                Swal.showLoading()
+              }
+            })
+            },
+            success: (data) => { 
+
+            Swal.close(); 
+
+              Swal.fire({
+                icon: 'success',
+                title: 'Registered succesfully.',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ok'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  location.reload();
+                }
+              })
+
+
+            }
+           });
+
+        }else{
+              Swal.fire({
+                icon: 'error',
+                title: 'Please fillup all the inputs',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ok'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                
+                }
+              })
+        }
+
+        }else{
+              Swal.fire({
+                icon: 'error',
+                title: 'Please check Ruleses & Regulations',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ok'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                
+                }
+              })
+        }
+
+      });
+
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const button = document.querySelector(".input-box input[type='submit']"),
