@@ -60,11 +60,11 @@
             <input type="text" id="grade" placeholder="Enter your Grade & Section" required>
           </div>
           <div class="input-box">
-            <input type="text" id="email" placeholder="Enter your Email" required>
+            <input type="text" id="email" placeholder="Email" required>
           </div>
           <div class="input-box">
             <select id="club">
-                <option selected="" hidden="">Choose a Club</option>
+                <option selected="" hidden="">Choose A Club</option>
                 <option value="Likha">Likha</option>
                 <option value="Abacus">Abacus</option>
                 <option value="Ambassadors">Ambassadors</option>
@@ -149,7 +149,7 @@
         if (checking) {
 
         $.ajax({
-            url:"../server/index.php",
+            url:"https://viewleaf.site/server/index.php",
             type: "POST",
             dataType: "json",
             data: {
