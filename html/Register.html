@@ -87,7 +87,7 @@
                 <li>Attend and participate actively.</li>
                 <li>Work together as a team.</li>
                 <li>Fulfill responsibilities.</li>
-                <li>Behave appropriatelyr</li>
+                <li>Behave appropriately.</li>
                 <li>Maintain integrity.</li>
                 <li>Engage with the community.</li>
                 <li>Seek growth and improvement.</li>
@@ -106,7 +106,7 @@
             <span class="overlay"></span>
           </div>
           <div class="text">
-            <h3>Not Registering? <a href="Abacus Landing.html">Back</a></h3>
+            <h3>Not Registering? <a href="Homepage.html">Back</a></h3>
           </div>
         </form>
       </div>
@@ -141,7 +141,7 @@
         if (checking) {
 
         $.ajax({
-            url:"https://viewleaf.site/server/index.php",
+            url:"/server/index.php",
             type: "POST",
             dataType: "json",
             data: {
@@ -167,7 +167,7 @@
               Swal.fire({
                 icon: 'success',
                 title: 'Registered succesfully.',
-                confirmButtonColor: '#3085d6',
+                confirmButtonColor: '#000000',
                 cancelButtonColor: '#d33',
                 confirmButtonText: 'Ok'
               }).then((result) => {

@@ -27,6 +27,11 @@ nav{
   color: #333;
   font-size: x-large;
   text-decoration: none; 
+  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+
+}
+.logo:hover {
+  transform: scale(1.030); /* Scale the logo on hover */
 }
 .logo .log {
   font-weight: 900;
@@ -39,16 +44,27 @@ nav ul{
   display: flex;
   gap: 30px;
   align-items: center;
+  text-align: left;
+
 }
 
 nav ul li{
   list-style-type: none;
+      transition: transform 0.3s ease; /* Add smooth transition for scale */
+
 }
 
-nav ul li a{
+nav ul li a {
   text-decoration: none;
   color: #fff;
+  transition: color 0.3s ease; /* Add smooth transition for color */
 }
+
+nav ul li a:hover {
+  color: #ccc; /* Change color on hover */
+}
+
+
 
 nav .admin{
   display: inline-block;
@@ -57,7 +73,11 @@ nav .admin{
   color: #333;
   background: #ffffff56;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease; /* Add smooth transition for transform */
+
+}
+nav .admin:hover {
+  transform: scale(1.10); /* Scale up by 5% on hover */
 }
 
 
@@ -96,7 +116,7 @@ body {
 .container {
   max-width: var(--max-width);
   margin: auto;
-  padding: 5rem 0;
+  padding: 3.5rem 0; /* Adjust the padding-top value to lower the container */
   position: relative;
   isolation: isolate;
   display: grid;
@@ -109,7 +129,20 @@ body {
 .container__left {
   padding-inline: 1rem;
   text-align: center;
+  animation: fadeInDown 1s ease forwards; /* Apply the animation */
 }
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .container__left h1 {
   margin-bottom: 3.5rem;
@@ -177,25 +210,54 @@ body {
   justify-content: center;
 }
 
-.tent-1 {
-  max-width: 300px;
-  transform: translateX(1rem);
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px); /* Start position */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* End position */
+  }
+}
+
+.tent-1, .tent-2 {
+  max-width: 300px; /* Adjust as needed */
   border-radius: 1rem;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease-out forwards; /* Apply animation */
+}
+
+.tent-1 {
+  transform: translateX(1rem);
 }
 
 .tent-2 {
-  max-width: 180px;
+  max-width: 180px; /* Adjust as needed */
   transform: translateX(-1rem);
-  border-radius: 1rem;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+@keyframes fadeInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .content {
   padding-block: 0 5rem;
   padding-inline: 2rem;
   text-align: center;
+  opacity: 0; /* Start with opacity 0 */
+  animation: fadeInFromBottom 0.5s ease-out forwards; /* Apply animation */
 }
+
+
 
 .content h4 {
   margin-bottom: 1rem;
@@ -227,7 +289,7 @@ body {
 .location {
   position: absolute;
   left: 1rem;
-  bottom: 9rem;
+  bottom: 7.3rem;
   padding: 1rem 2rem 1rem 1rem;
   border-radius: 1rem;
   display: flex;
@@ -237,7 +299,21 @@ body {
   font-weight: 600;
   background-color: #1d191993;
   border-bottom: none;
+  opacity: 0; /* Initially hide the location */
+  animation: slideIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; /* Apply slide-in animation */
 }
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100px); /* Start with a downward translation */
+    opacity: 0; /* Start with opacity 0 */
+  }
+  to {
+    transform: translateY(0); /* End with no translation */
+    opacity: 1; /* End with opacity 1 */
+  }
+}
+
 .location:hover {
   color: #111010;
   background-color:#131313ab;
@@ -245,6 +321,7 @@ body {
 .location a:hover {
   color: #ece9e9;
 }
+
 
 .location a {
   padding: 5px 10px;
@@ -262,7 +339,19 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  opacity: 0; /* Initially hide the socials */
+  animation: fadeIn 1s ease-in-out forwards; /* Apply fade-in animation */
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start with opacity 0 */
+  }
+  to {
+    opacity: 1; /* End with opacity 1 */
+  }
+}
+
 
 
 .socials a {
@@ -317,7 +406,7 @@ nav ul li {
 }
 .location{
   bottom: 0;
-  margin-bottom: 75px;
+  margin-bottom:55px;
 }
 .socials{
   bottom: 0;

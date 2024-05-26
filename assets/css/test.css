@@ -21,7 +21,12 @@ nav{
     color: #333;
     font-size: x-large;
     text-decoration: none; 
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+
   }
+  .logo:hover {
+    transform: scale(1.030); /* Scale the logo on hover */
+}
   .logo .log {
     font-weight: 900;
     color: #fff;
@@ -34,16 +39,27 @@ nav{
     gap: 30px;
     align-items: center;
     text-align: left;
+
   }
   
   nav ul li{
     list-style-type: none;
+        transition: transform 0.3s ease; /* Add smooth transition for scale */
+
   }
   
-  nav ul li a{
+  nav ul li a {
     text-decoration: none;
     color: #fff;
-  }
+    transition: color 0.3s ease; /* Add smooth transition for color */
+}
+
+nav ul li a:hover {
+    color: #ccc; /* Change color on hover */
+}
+
+
+
   nav .admin{
     display: inline-block;
     padding: 10px 20px;
@@ -51,8 +67,12 @@ nav{
     color: #333;
     background: #ffffff56;
     text-decoration: none;
-    transition: all 0.3s ease;
-  }
+    transition: transform 0.3s ease; /* Add smooth transition for transform */
+
+}
+nav .admin:hover {
+    transform: scale(1.10); /* Scale up by 5% on hover */
+}
   .menu-icon{
     display: none;
   }
@@ -62,19 +82,43 @@ nav{
     font-size: 30px;
   }
   
+
+
 .welcome {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
 }
-.header-image{
+
+.header-image {
     width: 40%;
     margin-top: 70px;
     border-radius: 40px;
 }
 
-.start-test{
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.start-test {
     margin-top: 50px;
     background: rgba(36, 34, 32, 0.788);
     color: rgb(255, 252, 252);
@@ -82,16 +126,21 @@ nav{
     padding: 10px 20px 10px 20px;
     border-radius: 25px;
     cursor: pointer;
+    animation: fadeIn 0.5s ease; /* Apply fadeIn animation */
+    transition: transform 0.3s ease; /* Add smooth transition for scaling */
 }
 
-.start-test:hover{
+.start-test:hover {
     background-color: rgba(107, 106, 105, 0.685);
+    transform: scale(1.05); /* Scale up by 5% on hover */
 }
 
-.container{
+.container {
     display: none;
     flex-direction: row;
+    margin-top: -60px; /* Add negative margin to lower the container */
 }
+
 
 .question-container{
     margin: 100px;
@@ -101,14 +150,35 @@ nav{
 
 }
 
-#question-count{
-    
+#question-count {
     font-weight: bold;
     font-size: 25px;
-    
+    animation: slideInFromLeft 1.5s ease-out; /* Adjust the animation duration and timing function */
 }
 
-#question{
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#question {
     color: white;
     font-weight: 900;
     margin-top: 20px;
@@ -116,12 +186,13 @@ nav{
     background-color: rgba(36, 34, 32, 0.788);
     padding: 25px;
     border-radius: 25px;
-
-
-
+    animation: slideInFromTop 0.8s cubic-bezier(0.42, 0, 0.58, 1); /* Apply slideInFromTop animation with a cubic bezier timing function */
 }
 
+
 .ans{
+    animation: slideInFromBottom 0.8s ease; /* Apply slideInFromBottom animation */
+
     line-height: 35px;
     color: #fff;
     margin-top: 20px;
@@ -132,10 +203,21 @@ nav{
 
 }
 
+.ans:hover {
+    background-color: rgba(61, 60, 60, 0.8); /* Change background color on hover, click, and focus */
+    color: #fff; /* Change text color on hover, click, and focus */
+    transform: scale(1.015); /* Add a slight scale effect on hover, click, and focus */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Add smooth transition */
+}
+/* Add a class to elements with the "clicked" class */
+ 
+
+
+
 .my-alpha{
     color: black;
     font-weight: bold;
-    padding: 18px;
+    padding: 14px;
     background-color: rgba(196, 194, 194, 0.658);
     margin-right: 10px;
     border-radius: 16px 0px 0px 16px;
@@ -150,13 +232,21 @@ nav{
     margin-top: 40px;
 }
 
-#previous, #next{
+#previous, #next {
+    font-weight: 400;
     color: #fff;
     background-color: rgba(189, 181, 181, 0.808);
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px;
     border-radius: 10px;
     cursor: pointer;
+    transition: transform 0.3s ease; /* Add smooth transition for transform */
 }
+
+#previous:hover, #next:hover {
+    background-color: rgba(189, 181, 181, 0.9); /* Adjust background color on hover */
+    transform: scale(1.05); /* Scale up by 5% on hover */
+}
+
 
 #finish-link{
     background: rgba(107, 103, 103, 0.479);
@@ -205,7 +295,21 @@ nav{
     border-radius: 35px;
     width: 60%;
     margin: 0 auto; /* Added to center horizontally */
-;}
+    animation: fadeInDown 1.5s ease-in-out; /* Apply fadeInDown animation with smoother timing */
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 
 .your-answers {
     margin-top: 40px;
@@ -230,8 +334,9 @@ nav{
 #trait-title{
     padding-left: 30px;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
 }
+
 
 #trait div{
     text-align: center;

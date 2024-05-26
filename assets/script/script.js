@@ -396,7 +396,7 @@ const showAllQuestionAndAnswer = () => {
     document.getElementById("answers").innerHTML += element;
 
     let cat = questionObj.answers[answer].cat;
-    switch (cat) {
+    switch (cat) { 
       case "likha":
         likhaCount++;
         break;
@@ -408,7 +408,7 @@ const showAllQuestionAndAnswer = () => {
         break;
       case "sports":
         sportsCount++;
-        break;
+        break; 
       case "math":
         mathCount++;
         break;
@@ -441,84 +441,70 @@ const showAllQuestionAndAnswer = () => {
 };
 
 const showPersonalities = (likha, abacus, ambassador, sports, math, science, letrato) => {
-  if (likha > abacus && likha > ambassador && likha > sports && likha > math && likha > science && likha > letrato) {
-    // Show result for "Likha"
-    document.getElementById("image").src = "logos/likha.jpg";
-    document.getElementById("trait-title").innerText = "You're compatible to Likha";
-    // Append Likha traits
-    let element = `<li>- Artistic and Creative</li>
-    <li>- Prefer Solitude for Inspiration</li>
-    <li>- Enjoy Exploring Ideas Deeply</li>`;
-    document.getElementById("personalities").innerHTML += element;
-  } else if (abacus > likha && abacus > ambassador && abacus > sports && abacus > math && abacus > science && abacus > letrato) {
-    // Show result for "Abacus"
-    document.getElementById("image").src = "logos/ict.jpg";
-    document.getElementById("trait-title").innerText = "You're compatible to Abacus";
-    // Append Abacus traits
-    let element = `<li>- Methodical and Detail-Oriented</li>
-    <li>- Enjoy Precision and Accuracy</li>
-    <li>- Prefer Working Independently and Focusing on Tasks</li>`;
-    document.getElementById("personalities").innerHTML += element;
-  } else if (ambassador > likha && ambassador > abacus && ambassador > sports && ambassador > math && ambassador > science && ambassador > letrato) {
-    // Show result for "Ambassador"
-    document.getElementById("image").src = "logos/ambassador.jpg";
-    document.getElementById("trait-title").innerText = "You're compatible to Ambassador";
-    // Append Ambassador traits
-    let element = `<li>- Outgoing and Charismatic</li>
-    <li>- Enjoy Networking and Building Relationships</li>
-    <li>- Prefer Communicating and Interacting with Others</li>`;
-    document.getElementById("personalities").innerHTML += element;
-  } else if (sports > likha && sports > abacus && sports > ambassador && sports > math && sports > science && sports > letrato) {
-    // Show result for "Sports"
-    document.getElementById("image").src = "logos/Sport.jpg";
-    document.getElementById("trait-title").innerText = "You're compatible to Sports";
-    // Append Sports traits
-    let element = `<li>- Energetic and Competitive</li>
-    <li>- Enjoy Physical Activities and Challenges</li>
-    <li>- Prefer Dynamic and Social Environments</li>`;
-    document.getElementById("personalities").innerHTML += element;
-  } else if (math > likha && math > abacus && math > ambassador && math > sports && math > science && math > letrato) {
-    // Show result for "Math"
-    document.getElementById("image").src = "logos/Math.jpg";
-    document.getElementById("trait-title").innerText = "You're compatible to Math";
-    // Append Math traits
-    let element = `<li>- Analytical and Logical Thinker</li>
-    <li>- Prefer Structured and Orderly Approach</li>
-    <li>- Enjoy Problem-Solving and Critical Thinking</li>`;
-    document.getElementById("personalities").innerHTML += element;
-  } else if (science > likha && science > abacus && science > ambassador && science > sports && science > math && science > letrato) {
-    // Show result for "Science"
-    document.getElementById("image").src = "logos/Science.jpg";
-    document.getElementById("trait-title").innerText = "You're compatible to Science";
-    // Append Science traits
-    let element = `<li>- Curious and Inquisitive</li>
-    <li>- Enjoy Experimentation and Exploration</li>
-    <li>- Prefer Collaborative and Social Learning</li>`;
-    document.getElementById("personalities").innerHTML += element;
-  } else {
-    // Show result for "Letrato"
-    document.getElementById("image").src = "logos/letrato.jpg";
-    document.getElementById("trait-title").innerText = "You're compatible to Letrato";
-    // Append Letrato traits
-    let element = `<li>- Reflective and Thoughtful</li>
-    <li>- Prefer to Observe Before Acting</li>
-    <li>- Enjoy Quiet and Calm Environments</li>`;
-    document.getElementById("personalities").innerHTML += element;
-  }
-
-  // Show test result
-  document.getElementById("test-result").style.display = "flex";
-
-  // Show restart button
-  document.getElementById("restart").style.display = "block";
+  // Clear previous results
+  document.getElementById("personalities").innerHTML = "";
 
 
-  document.getElementById("finish").style.display = "block";
 
-  // Show the right side
-  document.getElementsByClassName("your-answers")[0].style.display = "block";
-};
+  // Initialize club data
+  const clubs = [
+    { name: "Likha ", score: likha, img: "logos/likha.jpg", traits: `<li>- Artistic and Creative</li><li>- Prefer Solitude for Inspiration</li><li>- Enjoy Exploring Ideas Deeply</li>` },
+    { name: "Abacus", score: abacus, img: "logos/ict.jpg", traits: `<li>- Methodical and Detail-Oriented</li><li>- Enjoy Precision and Accuracy</li><li>- Prefer Working Independently and Focusing on Tasks</li>` },
+    { name: "Ambassador", score: ambassador, img: "logos/ambassador.jpg", traits: `<li>- Outgoing and Charismatic</li><li>- Enjoy Networking and Building Relationships</li><li>- Prefer Communicating and Interacting with Others</li>` },
+    { name: "Sports", score: sports, img: "logos/Sport.jpg", traits: `<li>- Energetic and Competitive</li><li>- Enjoy Physical Activities and Challenges</li><li>- Prefer Dynamic and Social Environments</li>` },
+    { name: "Math", score: math, img: "logos/Math.jpg", traits: `<li>- Analytical and Logical Thinker</li><li>- Prefer Structured and Orderly Approach</li><li>- Enjoy Problem-Solving and Critical Thinking</li>` },
+    { name: "Science", score: science, img: "logos/Science.jpg", traits: `<li>- Curious and Inquisitive</li><li>- Enjoy Experimentation and Exploration</li><li>- Prefer Collaborative and Social Learning</li>` },
+    { name: "Letrato", score: letrato, img: "logos/letrato.jpg", traits: `<li>- Reflective and Thoughtful</li><li>- Prefer to Observe Before Acting</li><li>- Enjoy Quiet and Calm Environments</li>` }
+];
 
+// Find the highest score
+let highestScore = Math.max(likha, abacus, ambassador, sports, math, science, letrato);
+
+// Filter clubs with the highest score
+let topClubs = clubs.filter(club => club.score === highestScore);
+
+// Display only the first two top clubs with the same score
+// Display only one randomly selected top club if there are multiple clubs with the same highest score
+if (topClubs.length > 1) {
+  const randomIndex = Math.floor(Math.random() * topClubs.length);
+  const randomClub = topClubs[randomIndex];
+  
+  // Display the image and title for the randomly selected top club
+  document.getElementById("image").src = randomClub.img;
+  let traitTitle = document.getElementById("trait-title");
+  traitTitle.innerHTML = `You're compatible with ${randomClub.name}`;
+  traitTitle.style.textAlign = "center";  
+
+  // Append the traits of the randomly selected top club
+  document.getElementById("personalities").innerHTML += randomClub.traits;
+} else {
+  // Display the image and title for the first top club (only once)
+  const club = topClubs[0];
+  document.getElementById("image").src = club.img;
+  let traitTitle = document.getElementById("trait-title");
+  traitTitle.innerHTML = `You're compatible with ${club.name}`;
+  traitTitle.style.textAlign = "center";  
+
+  // Append the traits of the top club
+  document.getElementById("personalities").innerHTML += club.traits;
+}
+
+
+// If there are more than two top clubs, display a message
+
+// Show test result
+document.getElementById("test-result").style.display = "flex";
+
+// Show restart button
+document.getElementById("restart").style.display = "block";
+
+// Show the finish button
+document.getElementById("finish").style.display = "block";
+
+// Show the right side
+document.getElementsByClassName("your-answers")[0].style.display = "block";
+}
 const restartQuestion = () => {
  window.location.reload();
 };
+

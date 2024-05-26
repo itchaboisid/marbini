@@ -20,7 +20,12 @@ nav{
     color: #333;
     font-size: x-large;
     text-decoration: none; 
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+
   }
+  .logo:hover {
+    transform: scale(1.030); /* Scale the logo on hover */
+}
   .logo .log {
     font-weight: 900;
     color: #fff;
@@ -32,16 +37,28 @@ nav{
     display: flex;
     gap: 30px;
     align-items: center;
+    text-align: left;
+
   }
   
   nav ul li{
     list-style-type: none;
+        transition: transform 0.3s ease; /* Add smooth transition for scale */
+
   }
   
-  nav ul li a{
+  nav ul li a {
     text-decoration: none;
     color: #fff;
-  }
+    transition: color 0.3s ease; /* Add smooth transition for color */
+}
+
+nav ul li a:hover {
+    color: #ccc; /* Change color on hover */
+}
+
+
+
   nav .admin{
     display: inline-block;
     padding: 10px 20px;
@@ -49,8 +66,12 @@ nav{
     color: #333;
     background: #ffffff56;
     text-decoration: none;
-    transition: all 0.3s ease;
-  }
+    transition: transform 0.3s ease; /* Add smooth transition for transform */
+
+}
+nav .admin:hover {
+    transform: scale(1.10); /* Scale up by 5% on hover */
+}
   .menu-icon{
     display: none;
   }
@@ -75,16 +96,30 @@ nav{
     z-index: -1;
     height: 100%;
   }
+  
   ::selection{
     background:    #1a1818;
     color: #fff;
   }
-  .container{
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .container {
     max-width: 950px;
     width: 100%;
     overflow: hidden;
     padding: 80px 0;
+    animation: fadeIn 0.5s ease-in-out;
   }
+  
   .container .main-card{
     display: flex;
     justify-content: space-evenly;

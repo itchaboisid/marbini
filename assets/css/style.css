@@ -21,6 +21,11 @@ nav{
   color: #333;
   font-size: x-large;
   text-decoration: none; 
+  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+
+}
+.logo:hover {
+  transform: scale(1.030); /* Scale the logo on hover */
 }
 .logo .log {
   font-weight: 900;
@@ -33,16 +38,28 @@ nav ul{
   display: flex;
   gap: 30px;
   align-items: center;
+  text-align: left;
+
 }
 
 nav ul li{
   list-style-type: none;
+      transition: transform 0.3s ease; /* Add smooth transition for scale */
+
 }
 
-nav ul li a{
+nav ul li a {
   text-decoration: none;
   color: #fff;
+  transition: color 0.3s ease; /* Add smooth transition for color */
 }
+
+nav ul li a:hover {
+  color: #ccc; /* Change color on hover */
+}
+
+
+
 nav .admin{
   display: inline-block;
   padding: 10px 20px;
@@ -50,7 +67,11 @@ nav .admin{
   color: #333;
   background: #ffffff56;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease; /* Add smooth transition for transform */
+
+}
+nav .admin:hover {
+  transform: scale(1.10); /* Scale up by 5% on hover */
 }
 
 
@@ -91,6 +112,7 @@ nav .admin{
   height: 100%;
   width: 100%;
   object-fit: cover;
+
 }
 .slide .image-data {
   position: absolute;
@@ -100,7 +122,27 @@ nav .admin{
   text-align: center;
   width: 100%;
   z-index: 100;
+  opacity: 0; /* Initially hide the element */
+  animation: fadeInUp 0.5s ease forwards; /* Apply animation */
 }
+
+
+.animate-slide {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
 .image-data span.text {
   font-size: 14px;
   font-weight: 400;

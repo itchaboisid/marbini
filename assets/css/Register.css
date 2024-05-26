@@ -20,6 +20,11 @@ nav{
   color: #333;
   font-size: x-large;
   text-decoration: none; 
+  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+
+}
+.logo:hover {
+  transform: scale(1.030); /* Scale the logo on hover */
 }
 .logo .log {
   font-weight: 900;
@@ -32,16 +37,27 @@ nav ul{
   display: flex;
   gap: 30px;
   align-items: center;
+  text-align: left;
+
 }
 
 nav ul li{
   list-style-type: none;
+      transition: transform 0.3s ease; /* Add smooth transition for scale */
+
 }
 
-nav ul li a{
+nav ul li a {
   text-decoration: none;
   color: #fff;
+  transition: color 0.3s ease; /* Add smooth transition for color */
 }
+
+nav ul li a:hover {
+  color: #ccc; /* Change color on hover */
+}
+
+
 
 nav .admin{
   display: inline-block;
@@ -50,7 +66,11 @@ nav .admin{
   color: #333;
   background: #ffffff56;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease; /* Add smooth transition for transform */
+
+}
+nav .admin:hover {
+  transform: scale(1.10); /* Scale up by 5% on hover */
 }
 
 
@@ -62,15 +82,29 @@ nav .admin{
   color: #ffffffee;
   font-size: 30px;
 }
-.wrapper{
+.wrapper {
   position: relative;
   max-width: 430px;
   width: 100%;
   background: #fff;
   padding: 34px;
   border-radius: 6px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
 }
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
 .wrapper h2{
   position: relative;
   font-size: 22px;
