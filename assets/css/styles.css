@@ -23,15 +23,16 @@ nav{
   height: 70px;
 }
 
-.logo{
+.logo {
   color: #333;
   font-size: x-large;
-  text-decoration: none; 
-  transition: transform 0.3s ease; /* Add transition for smooth scaling */
-
+  text-decoration: none;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.5s ease; /* Add transitions for smooth scaling, rotation, and color change */
 }
+
 .logo:hover {
-  transform: scale(1.030); /* Scale the logo on hover */
+  transform: scale(1.1) translateX(10px); /* Scale the logo slightly and translate it horizontally on hover */
+  color: #ff69b4; /* Change color on hover */
 }
 .logo .log {
   font-weight: 900;
@@ -166,12 +167,16 @@ body {
   color: var(rgba(0, 0, 0, 0.781));
   background-color: var(--text-dark);
   border-radius: 5rem;
+  transition: all 0.3s ease; /* Add a smooth transition for all properties */
 }
 
 .container__left .btn:hover {
   color: var(--text-dark);
   background-color: var(--primary-color);
+  transform: scale(1.05); /* Slightly scale up the button on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a subtle shadow on hover */
 }
+
 
 .container__right {
   position: relative;
@@ -280,6 +285,21 @@ body {
   font-weight: 600;
   color: var(--text-dark);
 }
+h3 a {
+  text-decoration: none;
+  color: inherit; /* Inherits the color from the parent element */
+  transition: color 0.3s ease, transform 0.3s ease, font-size 0.3s ease;
+  display: inline-block;
+}
+
+h3 a:hover {
+  color: hsl(0, 0%, 100%); /* Changes color on hover */
+  transform: scale(0.7rem); /* Slightly enlarges the link */
+  font-size: 1.1em; /* Increases the font size */
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds shadow on hover */
+
+}
+
 
 .content p {
   line-height: 1.75rem;
@@ -301,7 +321,15 @@ body {
   border-bottom: none;
   opacity: 0; /* Initially hide the location */
   animation: slideIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; /* Apply slide-in animation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
+
+.location:hover {
+  transform: translateY(-5px) scale(1.05); /* Slightly lift and enlarge the element */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a more pronounced shadow */
+  background-color: #2a2727b3; /* Slightly darken the background color */
+}
+
 
 @keyframes slideIn {
   from {

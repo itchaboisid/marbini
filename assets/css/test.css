@@ -17,16 +17,20 @@ nav{
     height: 70px;
   }
   
-  .logo{
+  .logo {
     color: #333;
     font-size: x-large;
-    text-decoration: none; 
-    transition: transform 0.3s ease; /* Add transition for smooth scaling */
-
-  }
-  .logo:hover {
-    transform: scale(1.030); /* Scale the logo on hover */
+    text-decoration: none;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.5s ease; /* Add transitions for smooth scaling, rotation, and color change */
 }
+
+.logo:hover {
+    transform: scale(1.1) translateX(10px); /* Scale the logo slightly and translate it horizontally on hover */
+    color: #ff69b4; /* Change color on hover */
+}
+
+
+
   .logo .log {
     font-weight: 900;
     color: #fff;
@@ -187,12 +191,13 @@ nav .admin:hover {
     padding: 25px;
     border-radius: 25px;
     animation: slideInFromTop 0.8s cubic-bezier(0.42, 0, 0.58, 1); /* Apply slideInFromTop animation with a cubic bezier timing function */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
 }
 
 
-.ans{
-    animation: slideInFromBottom 0.8s ease; /* Apply slideInFromBottom animation */
 
+.ans {
+    animation: slideInFromBottom 0.8s ease; /* Apply slideInFromBottom animation */
     line-height: 35px;
     color: #fff;
     margin-top: 20px;
@@ -200,15 +205,22 @@ nav .admin:hover {
     padding: 8px 0px 8px 0px;
     cursor: pointer;
     border-radius: 20px;
-
+    font-size: 16px; /* Initial font size */
+    transition: font-size 0.3s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for font size, background color, transform, and box shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow */
 }
 
 .ans:hover {
-    background-color: rgba(61, 60, 60, 0.8); /* Change background color on hover, click, and focus */
-    color: #fff; /* Change text color on hover, click, and focus */
-    transform: scale(1.015); /* Add a slight scale effect on hover, click, and focus */
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Add smooth transition */
+    font-size: 18px; /* Bigger font size on hover */
+    background-color: rgba(61, 60, 60, 0.8); /* Darker background color on hover */
+    transform: scale(1.02); /* Scale up slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhance the box shadow on hover */
 }
+
+.ans:hover {
+    font-size: 18px; /* Bigger font size on hover */
+  }
+
 /* Add a class to elements with the "clicked" class */
  
 
@@ -221,10 +233,7 @@ nav .admin:hover {
     background-color: rgba(196, 194, 194, 0.658);
     margin-right: 10px;
     border-radius: 16px 0px 0px 16px;
-
 }
-
-
 
 .btn{
     display: flex;
@@ -474,6 +483,9 @@ nav .admin:hover {
         line-height: 30px;
 
         }
+        .ans:hover {
+            font-size: 12px; /* Bigger font size on hover */
+          }
     .ans .my-alpha{
         margin-left: 0;
         width: 10px;

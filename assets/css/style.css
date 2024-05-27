@@ -17,15 +17,16 @@ nav{
   height: 70px;
 }
 
-.logo{
+.logo {
   color: #333;
   font-size: x-large;
-  text-decoration: none; 
-  transition: transform 0.3s ease; /* Add transition for smooth scaling */
-
+  text-decoration: none;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.5s ease; /* Add transitions for smooth scaling, rotation, and color change */
 }
+
 .logo:hover {
-  transform: scale(1.030); /* Scale the logo on hover */
+  transform: scale(1.1) translateX(10px); /* Scale the logo slightly and translate it horizontally on hover */
+  color: #ff69b4; /* Change color on hover */
 }
 .logo .log {
   font-weight: 900;
@@ -158,11 +159,19 @@ nav .admin:hover {
   font-style: italic;
   font-size: 70px;
 }
-.image-data P{
+.image-data p {
   font-weight: 500;
   font-size: 0.905rem;
   color: white;
+  transition: font-size 0.3s ease, color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for font size, color, and text shadow change */
 }
+
+.image-data p:hover {
+  font-size: 1.15rem; /* Bigger font size on hover */
+  color: #ffffff; /* Change text color on hover */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add text shadow on hover */
+}
+
 
 a.button {
   display: inline-block;
@@ -173,6 +182,7 @@ a.button {
   text-decoration: none;
   margin-top: 25px;
   transition: all 0.3s ease;
+  font-weight: 500;
 }
 a.button:hover {
   color: #fff;
@@ -285,60 +295,93 @@ a.button {
 
 
 @media (max-width: 964px) {
-  .image-data P{
-    font-size: 0.78rem;
-    margin-left: 50px;
-    text-align: center;
-    margin-right: 50px;
-
-  
+  .image-data p {
+    font-size: 0.78rem; /* Adjust font size for even smaller screens */
+    margin-left: 50px; /* Adjust margin for even smaller screens */
+    margin-right: 50px; /* Adjust margin for even smaller screens */
+    text-align: center; /* Center-align text for even smaller screens */
   }
-}
+  /* Disable hover effect on even smaller screens */
+  .image-data p:hover {
+    font-size: 0.78rem; /* Keep font size the same as normal state */
+    color: white; /* Keep text color the same as normal state */
+    text-shadow: none; /* Remove text shadow on hover */
+  }
+} 
+
+
 @media (max-width: 600px) {
-  .image-data P{
+  .image-data p {
     font-size: 0.8rem;
     margin-left: 20px;
     margin-right: 20px;
-
     text-align: center;
-  
+  }
+  /* Disable hover effect on screens up to 600px */
+  .image-data p:hover {
+    font-size: 0.8rem; /* Keep font size the same as normal state */
+    color: white; /* Keep text color the same as normal state */
+    text-shadow: none; /* Remove text shadow on hover */
   }
 }
 
 @media (max-width: 500px) {
-  .image-data P{
+  .image-data p {
     font-size: 1.15rem;
     margin-left: 40px;
     text-align: center;
     margin-right: 40px;
-  
+  }
+  /* Disable hover effect on screens up to 500px */
+  .image-data p:hover {
+    font-size: 1.15rem; /* Keep font size the same as normal state */
+    color: white; /* Keep text color the same as normal state */
+    text-shadow: none; /* Remove text shadow on hover */
   }
 }
 
 @media (max-width: 400px) {
-  .image-data P{
+  .image-data p {
     font-size: 1.1rem;
     margin-left: 15px;
     text-align: center;
     margin-left: 15px;
-}
+  }
+  /* Disable hover effect on screens up to 400px */
+  .image-data p:hover {
+    font-size: 1.1rem; /* Keep font size the same as normal state */
+    color: white; /* Keep text color the same as normal state */
+    text-shadow: none; /* Remove text shadow on hover */
+  }
 }
 
 @media (max-width: 390px) {
-  .image-data P{
+  .image-data p {
     font-size: 1rem;
     margin-left: 15px;
     text-align: center;
     margin-left: 15px;
+  }
+  /* Disable hover effect on screens up to 390px */
+  .image-data p:hover {
+    font-size: 1rem; /* Keep font size the same as normal state */
+    color: white; /* Keep text color the same as normal state */
+    text-shadow: none; /* Remove text shadow on hover */
+  }
 }
-}
-
 
 @media (max-width: 360px) {
-  .image-data P{
+  .image-data p {
     font-size: 0.9rem;
     margin-left: 15px;
     text-align: center;
     margin-left: 15px;
+  }
+  /* Disable hover effect on screens up to 360px */
+  .image-data p:hover {
+    font-size: 0.9rem; /* Keep font size the same as normal state */
+    color: white; /* Keep text color the same as normal state */
+    text-shadow: none; /* Remove text shadow on hover */
+  }
 }
-}
+

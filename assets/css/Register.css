@@ -16,15 +16,16 @@ nav{
   height: 70px;
 }
 
-.logo{
+.logo {
   color: #333;
   font-size: x-large;
-  text-decoration: none; 
-  transition: transform 0.3s ease; /* Add transition for smooth scaling */
-
+  text-decoration: none;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.5s ease; /* Add transitions for smooth scaling, rotation, and color change */
 }
+
 .logo:hover {
-  transform: scale(1.030); /* Scale the logo on hover */
+  transform: scale(1.1) translateX(10px); /* Scale the logo slightly and translate it horizontally on hover */
+  color: #ff69b4; /* Change color on hover */
 }
 .logo .log {
   font-weight: 900;
