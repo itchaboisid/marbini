@@ -7,7 +7,8 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-nav{
+
+nav {
   padding: 10px 30px;
   display: flex;
   align-items: center;
@@ -21,155 +22,162 @@ nav{
   color: #333;
   font-size: x-large;
   text-decoration: none;
-  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.5s ease; /* Add transitions for smooth scaling, rotation, and color change */
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.5s ease; /* Smooth scaling, rotation, and color change */
 }
 
 .logo:hover {
-  transform: scale(1.1) translateX(10px); /* Scale the logo slightly and translate it horizontally on hover */
+  transform: scale(1.1) translateX(10px); /* Scale and translate on hover */
   color: #ff69b4; /* Change color on hover */
 }
+
 .logo .log {
   font-weight: 900;
   color: #fff;
   text-decoration: none;
-
 }
 
-nav ul{
+nav ul {
   display: flex;
   gap: 30px;
   align-items: center;
   text-align: left;
-
 }
 
-nav ul li{
+nav ul li {
   list-style-type: none;
-      transition: transform 0.3s ease; /* Add smooth transition for scale */
-
+  transition: transform 0.5s ease; /* Smoother scale transition */
 }
 
 nav ul li a {
   text-decoration: none;
   color: #fff;
-  transition: color 0.3s ease; /* Add smooth transition for color */
+  transition: color 0.5s ease; /* Smoother color transition */
 }
 
 nav ul li a:hover {
   color: #ccc; /* Change color on hover */
 }
 
-
-
-nav .admin{
+nav .admin {
   display: inline-block;
   padding: 10px 20px;
   border-radius: 25px;
   color: #333;
   background: #ffffff56;
   text-decoration: none;
-  transition: transform 0.3s ease; /* Add smooth transition for transform */
-
+  transition: transform 0.5s ease; /* Smoother transform transition */
 }
+
 nav .admin:hover {
-  transform: scale(1.10); /* Scale up by 5% on hover */
+  transform: scale(1.1); /* Scale up on hover */
 }
 
-
-
-
-.menu-icon{
+.menu-icon {
   display: none;
 }
 
-.menu-icon i{
+.menu-icon i {
   color: #fff;
   font-size: 30px;
 }
 
-.body{
-    box-sizing: border-box;
-    padding: 0;
-    height: 100%;
-    display: grid;
-    place-items: center;
-    text-align: center;
-  }
-  
-  .container{
-    margin-top: 12rem;
-    padding: 0 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .card{
-    height: 300px;
-    max-width: 430px;
-    margin: 0 60px;
-    background: rgba(63, 60, 60, 0.774);
-    transition: 0.4s;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-  }
-  .card:hover{
-    height: 470px;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
-  }
-  .card .img{
-    height: 200px;
-    width: 100%;
-  }
-  .card .img img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-  .card .top-text{
-    padding: 5px;
-  }
-  .card .top-text .name{
-    font-size: 25px;
-    font-weight: 600;
-    color: #202020;
-  }
-  .card .top-text p{
-    font-size: 20px;
-    font-weight: 600;
-    color: #ebe5e4;
-    line-height: 20px;
-  }
-  .card .bottom-text{
-    padding: 0 20px 10px 20px;
-    margin-top: 5px;
-    background: rgba(82, 81, 81, 0.514);
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.1s;
-  }
-  .card:hover .bottom-text{
-    opacity: 1;
-    visibility: visible;
-  }
-  .card .bottom-text .text{
-    text-align: justify;
-  }
-  .card .bottom-text .btn{
-    margin: 10px;
-    text-align: center;
-  }
-  .card .bottom-text .btn a{
-    text-align: center;
-    text-decoration: none;
-    background: #585757b7;
-    color: #f2f2f2;
-    padding: 5px 8px;
-    border-radius: 3px;
-    display: inline-flex;
-    transition: 0.2s;
-  }
-  .card .bottom-text .btn a:hover{
-    transform: scale(0.9);
-  }
+.body {
+  box-sizing: border-box;
+  padding: 0;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.container {
+  margin-top: 12rem;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  height: 300px;
+  max-width: 430px;
+  margin: 0 60px;
+  background: #fffcfc;
+  transition: height 0.6s ease, box-shadow 0.6s ease; /* Smoother height and shadow transition */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  height: 470px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card .img {
+  height: 200px;
+  width: 100%;
+}
+
+.card .img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card .top-text {
+  padding: 5px;
+}
+
+.card .top-text .name {
+  font-size: 25px;
+  font-weight: 600;
+  color: #202020;
+}
+
+.card .top-text p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #313030;
+  line-height: 20px;
+}
+
+.card .bottom-text {
+  padding: 0 20px 10px 20px;
+  margin-top: 5px;
+  background: rgba(252, 252, 252, 0.993);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, visibility 0.6s ease; /* Smoother opacity and visibility transition */
+}
+
+.card:hover .bottom-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card .bottom-text .text {
+  text-align: justify;
+}
+
+.card .bottom-text .btn {
+  margin: 10px;
+  text-align: center;
+}
+
+.card .bottom-text .btn a {
+  text-align: center;
+  text-decoration: none;
+  background: #585757b7;
+  color: #f2f2f2;
+  padding: 5px 8px;
+  border-radius: 3px;
+  display: inline-flex;
+  transition: transform 0.5s ease; /* Smoother transform transition */
+}
+
+.card .bottom-text .btn a:hover {
+  transform: scale(0.9);
+}
+
   @media screen and (max-width: 978px) {
     .container{
       flex-wrap: wrap;
