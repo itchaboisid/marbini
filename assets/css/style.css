@@ -161,13 +161,13 @@ nav .admin:hover {
 }
 .image-data p {
   font-weight: 500;
-  font-size: 0.905rem;
+  font-size: 1.15rem;
   color: white;
   transition: font-size 0.3s ease, color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for font size, color, and text shadow change */
 }
 
 .image-data p:hover {
-  font-size: 1.15rem; /* Bigger font size on hover */
+  font-size: 1.20rem; /* Bigger font size on hover */
   color: #ffffff; /* Change text color on hover */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add text shadow on hover */
 }
@@ -287,12 +287,6 @@ a.button {
 }
 
 }
-
-
-    
-
-  
-
 
 @media (max-width: 964px) {
   .image-data p {
