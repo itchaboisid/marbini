@@ -22,12 +22,12 @@ nav {
   color: #333;
   font-size: x-large;
   text-decoration: none;
-  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.5s ease; /* Smooth scaling, rotation, and color change */
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.5s ease;
 }
 
 .logo:hover {
-  transform: scale(1.1) translateX(10px); /* Scale and translate on hover */
-  color: #ff69b4; /* Change color on hover */
+  transform: scale(1.1) translateX(10px);
+  color: #ff69b4;
 }
 
 .logo .log {
@@ -45,17 +45,17 @@ nav ul {
 
 nav ul li {
   list-style-type: none;
-  transition: transform 0.5s ease; /* Smoother scale transition */
+  transition: transform 0.5s ease;
 }
 
 nav ul li a {
   text-decoration: none;
   color: #fff;
-  transition: color 0.5s ease; /* Smoother color transition */
+  transition: color 0.5s ease;
 }
 
 nav ul li a:hover {
-  color: #ccc; /* Change color on hover */
+  color: #ccc;
 }
 
 nav .admin {
@@ -65,11 +65,11 @@ nav .admin {
   color: #333;
   background: #ffffff56;
   text-decoration: none;
-  transition: transform 0.5s ease; /* Smoother transform transition */
+  transition: transform 0.5s ease;
 }
 
 nav .admin:hover {
-  transform: scale(1.1); /* Scale up on hover */
+  transform: scale(1.1);
 }
 
 .menu-icon {
@@ -91,24 +91,35 @@ nav .admin:hover {
 }
 
 .container {
-  margin-top: 12rem;
+  margin-top: 1rem;
   padding: 0 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .card {
+  border-radius: 2rem;
   height: 300px;
   max-width: 430px;
   margin: 0 60px;
-  background: #fffcfc;
-  transition: height 0.6s ease, box-shadow 0.6s ease; /* Smoother height and shadow transition */
+  background: #fffefeee;
+  transition: height 0.6s ease, box-shadow 0.6s ease;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .card:hover {
-  height: 470px;
+  height: 360px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -118,6 +129,7 @@ nav .admin:hover {
 }
 
 .card .img img {
+  border-radius: 2rem 2rem 0 0;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -128,25 +140,24 @@ nav .admin:hover {
 }
 
 .card .top-text .name {
+  margin-top: 0.8rem;
   font-size: 25px;
   font-weight: 600;
-  color: #202020;
+  color: #070706;
 }
 
 .card .top-text p {
   font-size: 20px;
   font-weight: 600;
-  color: #313030;
   line-height: 20px;
 }
 
 .card .bottom-text {
   padding: 0 20px 10px 20px;
   margin-top: 5px;
-  background: rgba(252, 252, 252, 0.993);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.6s ease, visibility 0.6s ease; /* Smoother opacity and visibility transition */
+  transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
 .card:hover .bottom-text {
@@ -155,6 +166,7 @@ nav .admin:hover {
 }
 
 .card .bottom-text .text {
+  opacity: 0;
   text-align: justify;
 }
 
@@ -164,72 +176,72 @@ nav .admin:hover {
 }
 
 .card .bottom-text .btn a {
+  opacity: 1;
   text-align: center;
   text-decoration: none;
-  background: #585757b7;
-  color: #f2f2f2;
-  padding: 5px 8px;
-  border-radius: 3px;
+  background: #000000b7;
+  color: hsla(0, 14%, 99%, 0.966);
+  padding: 12px 20px;
+  border-radius: 10px;
   display: inline-flex;
-  transition: transform 0.5s ease; /* Smoother transform transition */
+  transition: transform 0.5s ease;
 }
 
 .card .bottom-text .btn a:hover {
   transform: scale(0.9);
 }
 
-  @media screen and (max-width: 978px) {
-    .container{
-      flex-wrap: wrap;
-      flex-direction: column;
-    }
-    .card{
-      max-width: 700px;
-      margin: 20px 0;
-    }
+@media screen and (max-width: 978px) {
+  .container {
+    flex-wrap: wrap;
+    flex-direction: column;
   }
+  .card {
+    max-width: 700px;
+    margin: 20px 0;
+  }
+}
 
-  @media screen and (max-width: 768px) {
-
-    nav {
-      position: relative; /* Change position to relative */
-      z-index: 1000; /* Set a high z-index value */
-      padding: 10px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #202122;
-      height: 70px;
+@media screen and (max-width: 768px) {
+  nav {
+    position: relative;
+    z-index: 1000;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #202122;
+    height: 70px;
   }
   
   nav ul {
-      position: absolute;
-      top: 70px;
-      left: 0;
-      right: 0;
-      flex-direction: column;
-      text-align: center;
-      background: #020202d0;
-      gap: 0;
-      overflow: hidden;
-      z-index: 999; /* Set a z-index value lower than nav */
-      border-radius: 0px 0px 22px 20px;
-  
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    text-align: center;
+    background: #020202d0;
+    gap: 0;
+    overflow: hidden;
+    z-index: 999;
+    border-radius: 0px 0px 22px 20px;
   }
   
   nav ul li {
-      padding: 25px;
-      padding-top: 15px;
-    }
+    padding: 25px;
+    padding-top: 15px;
+  }
   
   .menu-icon {
-      display: block;
+    display: block;
   }
   
   #menuList {
-      transition: all 0.5s;
+    transition: all 0.5s;
   }
-  .container{
+  .container {
     margin-top: 2rem;
   }
-}
+
+  }
