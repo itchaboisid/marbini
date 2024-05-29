@@ -255,7 +255,7 @@ body {
 }
 
 .content {
-  margin-top: -5rem;
+  margin-top: -1rem;
   padding-block: 0 5rem;
   padding-inline: 2rem;
   text-align: center;
@@ -288,6 +288,7 @@ body {
   color: var(--text-dark);
 }
 h3 a {
+  line-height: 1.5rem;
   text-decoration: none;
   color: inherit; /* Inherits the color from the parent element */
   transition: color 0.3s ease, transform 0.3s ease, font-size 0.3s ease;
@@ -304,6 +305,7 @@ h3 a:hover {
 
 
 .content p {
+  margin-bottom: 1rem;
   line-height: 1.75rem;
   color: var(--text-dark);
 }
@@ -364,7 +366,7 @@ h3 a:hover {
   padding: 13px;
   border-radius: 30px;
   position: absolute;
-  bottom: 8rem;
+  bottom: 9.5rem;
   right: 4rem;
   display: flex;
   align-items: center;
@@ -372,23 +374,18 @@ h3 a:hover {
   opacity: 0; /* Initially hide the socials */
   animation: fadeIn 1s ease-in-out forwards; /* Apply fade-in animation */
 }
-.socials_2 {
-  padding: 13px;
-  border-radius: 30px;
-  position: absolute;
-  bottom: 8rem;
-  right: 20rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  opacity: 0; /* Initially hidden */
-  animation: fadeIn 1s ease-in-out forwards; /* Apply fade-in animation */
-  transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
+h3 .socials_2 a {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
 }
 
-.socials_2:hover {
-  transform: scale(1.1); /* Scale up by 10% on hover */
+h3 .socials_2 a:hover {
+  color: #e6e4eb; /* Change to desired hover color */
+  transform: scale(1.1); /* Scale up slightly on hover */
 }
+
+
 
 
 @keyframes fadeIn {
