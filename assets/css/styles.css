@@ -147,7 +147,7 @@ body {
 
 .container__left h1 {
   margin-bottom: 3.5rem;
-  margin-top: 1rem;
+  margin-top: -2.5rem;
   font-size:5REM;
   font-weight: 600;
   line-height: 5.5rem;
@@ -255,6 +255,7 @@ body {
 }
 
 .content {
+  margin-top: -5rem;
   padding-block: 0 5rem;
   padding-inline: 2rem;
   text-align: center;
@@ -273,13 +274,14 @@ body {
 
 .content h2 {
   margin-bottom: 0.5rem;
-  font-size: 2rem;
+  font-size: 2.8rem;
   font-weight: 700;
   letter-spacing: 2px;
   color: var(--text-dark);
 }
 
 .content h3 {
+  margin: 0.8rem;
   margin-bottom: 1rem;
   font-size: 1rem;
   font-weight: 600;
@@ -309,7 +311,7 @@ h3 a:hover {
 .location {
   position: absolute;
   left: 1rem;
-  bottom: 7.3rem;
+  bottom: 8.2rem;
   padding: 1rem 2rem 1rem 1rem;
   border-radius: 1rem;
   display: flex;
@@ -370,6 +372,44 @@ h3 a:hover {
   opacity: 0; /* Initially hide the socials */
   animation: fadeIn 1s ease-in-out forwards; /* Apply fade-in animation */
 }
+.socials_2 {
+  padding: 13px;
+  border-radius: 30px;
+  position: absolute;
+  bottom: 8rem;
+  right: 20rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1s ease-in-out forwards; /* Apply fade-in animation */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
+}
+
+.socials_2:hover {
+  transform: scale(1.1); /* Scale up by 10% on hover */
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Optional: slide up effect */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+  }
+}
+
+.socials_2 a{
+  font-weight: 400;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+
+}
+
 
 @keyframes fadeIn {
   from {
