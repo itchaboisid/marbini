@@ -1,0 +1,227 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+nav{
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #202122;
+  position: relative;
+  height: 70px;
+}
+
+.logo {
+  color: #333;
+  font-size: x-large;
+  text-decoration: none;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.5s ease; /* Add transitions for smooth scaling, rotation, and color change */
+}
+
+.logo:hover {
+  transform: scale(1.1) translateX(10px); /* Scale the logo slightly and translate it horizontally on hover */
+  color: #ff69b4; /* Change color on hover */
+}
+.logo .log {
+  font-weight: 900;
+  color: #fff;
+  text-decoration: none;
+
+}
+
+nav ul{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  text-align: left;
+
+}
+
+nav ul li{
+  list-style-type: none;
+      transition: transform 0.3s ease; /* Add smooth transition for scale */
+
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease; /* Add smooth transition for color */
+}
+
+nav ul li a:hover {
+  color: #ccc; /* Change color on hover */
+}
+
+
+
+nav .admin{
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #333;
+  background: #ffffff56;
+  text-decoration: none;
+  transition: transform 0.3s ease; /* Add smooth transition for transform */
+
+}
+nav .admin:hover {
+  transform: scale(1.10); /* Scale up by 5% on hover */
+}
+
+
+
+
+.menu-icon{
+  display: none;
+}
+
+.menu-icon i{
+  color: #fff;
+  font-size: 30px;
+}
+
+.body{
+    box-sizing: border-box;
+    padding: 0;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+  
+  .container{
+    margin-top: 12rem;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .card{
+    height: 300px;
+    max-width: 430px;
+    margin: 0 60px;
+    background: rgba(63, 60, 60, 0.774);
+    transition: 0.4s;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  }
+  .card:hover{
+    height: 470px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+  }
+  .card .img{
+    height: 200px;
+    width: 100%;
+  }
+  .card .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .card .top-text{
+    padding: 5px;
+  }
+  .card .top-text .name{
+    font-size: 25px;
+    font-weight: 600;
+    color: #202020;
+  }
+  .card .top-text p{
+    font-size: 20px;
+    font-weight: 600;
+    color: #ebe5e4;
+    line-height: 20px;
+  }
+  .card .bottom-text{
+    padding: 0 20px 10px 20px;
+    margin-top: 5px;
+    background: rgba(82, 81, 81, 0.514);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.1s;
+  }
+  .card:hover .bottom-text{
+    opacity: 1;
+    visibility: visible;
+  }
+  .card .bottom-text .text{
+    text-align: justify;
+  }
+  .card .bottom-text .btn{
+    margin: 10px;
+    text-align: center;
+  }
+  .card .bottom-text .btn a{
+    text-align: center;
+    text-decoration: none;
+    background: #585757b7;
+    color: #f2f2f2;
+    padding: 5px 8px;
+    border-radius: 3px;
+    display: inline-flex;
+    transition: 0.2s;
+  }
+  .card .bottom-text .btn a:hover{
+    transform: scale(0.9);
+  }
+  @media screen and (max-width: 978px) {
+    .container{
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    .card{
+      max-width: 700px;
+      margin: 20px 0;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+
+    nav {
+      position: relative; /* Change position to relative */
+      z-index: 1000; /* Set a high z-index value */
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #202122;
+      height: 70px;
+  }
+  
+  nav ul {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      text-align: center;
+      background: #020202d0;
+      gap: 0;
+      overflow: hidden;
+      z-index: 999; /* Set a z-index value lower than nav */
+      border-radius: 0px 0px 22px 20px;
+  
+  }
+  
+  nav ul li {
+      padding: 25px;
+      padding-top: 15px;
+    }
+  
+  .menu-icon {
+      display: block;
+  }
+  
+  #menuList {
+      transition: all 0.5s;
+  }
+  .container{
+    margin-top: 2rem;
+  }
+}

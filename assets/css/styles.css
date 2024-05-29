@@ -273,6 +273,7 @@ body {
 }
 
 .content h2 {
+  margin-top: -3.2rem;
   margin-bottom: 0.5rem;
   font-size: 2.8rem;
   font-weight: 700;
@@ -366,7 +367,7 @@ h3 a:hover {
   padding: 13px;
   border-radius: 30px;
   position: absolute;
-  bottom: 9.5rem;
+  bottom: 10.5rem;
   right: 4rem;
   display: flex;
   align-items: center;
@@ -376,7 +377,7 @@ h3 a:hover {
 }
 h3 .socials_2 a {
   font-size: 2rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
 }
 

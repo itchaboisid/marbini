@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/events.css" />
+    <link rel="icon" type="image/png" href="/assets/images/logo.png"/>
+
+    <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+    <style>
+      body{
+        background-image: url(/images/Background.jpg);
+        background-size: auto;
+
+      }
+    </style>
+    <title>Events</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a class="log" href="/index.html">Unified Campus Connection</a>
+      </div>  
+      <ul id="menuList">
+        <li><a href="About Us.html"> About Us</a></li>
+        <li class="admin"><a href="Homepage.html">Club Infos</a></li>
+      </ul>
+      <div class="menu-icon">
+          <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
+      <script>
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+
+        function toggleMenu(){
+            if(menuList.style.maxHeight == "0px")
+            {
+                menuList.style.maxHeight = "300px";
+            }
+            else{
+                menuList.style.maxHeight = "0px";
+            }
+        }
+        
+    </script>
+  </nav>
+  <div class="body">
+  <div class="container">
+    <div class="card">
+       <div class="img">
+          <img src="#">
+       </div>
+       <div class="top-text">
+          <div class="name">
+             Likha Club's
+          </div>
+          <p>
+             Upcoming Event
+          </p>
+       </div>
+       <div class="bottom-text">
+          <div class="text">
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quaerat iusto adipisci reprehenderit quasi cum perspiciatis, minima reiciendis magni quam!
+          </div>
+          <div class="btn">
+             <a href="Likha Upcoming.html">Read more</a>
+          </div>
+       </div>
+    </div>
+    <div class="card">
+       <div class="img">
+          <img src="#">
+       </div>
+       <div class="top-text">
+          <div class="name">
+             Likha Club's
+          </div>
+          <p>
+            Past Events
+           </p>
+       </div>
+       <div class="bottom-text">
+          <div class="text">
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quaerat iusto adipisci reprehenderit quasi cum perspiciatis, minima reiciendis magni quam!
+          </div>
+          <div class="btn">
+             <a href="Likha Past.html">Read more</a>
+          </div>
+       </div>
+    </div>
+  
+    </div>
+ </div>
+</div>
+  </body>
