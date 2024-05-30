@@ -160,6 +160,10 @@ nav .admin:hover {
   font-size: 70px;
 }
 .image-data p {
+  -webkit-text-stroke: 0px black; /* Add a black border to each letter */
+
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add text shadow on hover */
+
   font-weight: 500;
   font-size: 1.15rem;
   color: white;
