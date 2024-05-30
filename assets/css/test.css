@@ -12,7 +12,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #202122;
+    background: #111010;
     position: relative;
     height: 70px;
   }
@@ -96,10 +96,34 @@ nav .admin:hover {
 }
 
 .header-image {
-    width: 40%;
-    margin-top: 70px;
-    border-radius: 40px;
+    width: 30%;
+    margin-top: 20px;
+    border-radius: 15rem;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Initial glowing effect */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition for transform and box-shadow */
 }
+
+.header-image:hover {
+    transform: scale(1.05); /* Slightly increase the size on hover */
+}
+
+@keyframes glowingEffect {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Start with initial glowing effect */
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Increase the intensity of the glowing effect */
+    }
+}
+
+.header-image:hover {
+    animation: glowingEffect 1s infinite alternate; /* Apply the glowing effect on hover */
+}
+
+
+
+
 
 
 @keyframes fadeIn {
@@ -123,26 +147,39 @@ nav .admin:hover {
 }
 
 .start-test {
-    margin-top: 50px;
+    margin-top: 30px;
     background: rgba(36, 34, 32, 0.788);
     color: rgb(255, 252, 252);
     font-size: 33px;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px;
     border-radius: 25px;
     cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Add a white glowing effect */
+
     animation: fadeIn 0.5s ease; /* Apply fadeIn animation */
-    transition: transform 0.3s ease; /* Add smooth transition for scaling */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition for scaling and shadow */
 }
 
 .start-test:hover {
-    background-color: rgba(107, 106, 105, 0.685);
-    transform: scale(1.05); /* Scale up by 5% on hover */
+    transform: scale(1.05); /* Slightly increase the size on hover */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Add a white glowing effect */
 }
+
+/* Optional: Define the fadeIn animation if not already defined */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 .container {
     display: none;
     flex-direction: row;
-    margin-top: -60px; /* Add negative margin to lower the container */
+    margin-top: -75px; /* Add negative margin to lower the container */
 }
 
 
@@ -155,6 +192,7 @@ nav .admin:hover {
 }
 
 #question-count {
+    color: white;
     font-weight: bold;
     font-size: 25px;
     animation: slideInFromLeft 1.5s ease-out; /* Adjust the animation duration and timing function */
@@ -190,9 +228,19 @@ nav .admin:hover {
     background-color: rgba(36, 34, 32, 0.788);
     padding: 25px;
     border-radius: 25px;
-    animation: slideInFromTop 0.8s cubic-bezier(0.42, 0, 0.58, 1); /* Apply slideInFromTop animation with a cubic bezier timing function */
+    animation: slideInFromTop 0.8s cubic-bezier(0.42, 0, 0.58, 1), glowingEffect 2s infinite alternate; /* Apply slideInFromTop animation with a cubic bezier timing function and glowingEffect animation */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
 }
+
+@keyframes glowingEffect {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Start with a soft glow */
+    }
+    100% {
+        box-shadow: 0 0 26px rgba(255, 255, 255, 0.9); /* Increase the glow intensity */
+    }
+}
+
 
 
 
@@ -214,7 +262,7 @@ nav .admin:hover {
     font-size: 18px; /* Bigger font size on hover */
     background-color: rgba(61, 60, 60, 0.8); /* Darker background color on hover */
     transform: scale(1.02); /* Scale up slightly on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhance the box shadow on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), 0 0 13.5px rgb(255, 255, 255); /* Enhance the box shadow and add glowing effect on hover */
 }
 
 .ans:hover {
@@ -431,7 +479,7 @@ nav .admin:hover {
     }
     .welcome {
         width: 100%;
-        margin-top: 150px;
+        margin-top: 70px;
     }
     .header-image {
         width: 80%;
