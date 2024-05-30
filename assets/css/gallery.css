@@ -136,6 +136,8 @@ section{
   justify-content: center;
 }
 .wrapper {
+  animation: glow 2s infinite alternate; /* Apply the glow animation */
+
   display: flex;
   max-width: 1300px;
   position: relative;
@@ -153,6 +155,7 @@ section{
 
 
   .wrapper i{
+    
     top: 50%;
     height: 44px;
     width: 44px;
@@ -168,12 +171,14 @@ section{
     transition: transform 0.1s linear;
   }
   .wrapper i:active{
+    
     transform: translateY(-50%) scale(0.9);
   }
   .wrapper i:hover{
     background: #f2f2f2;
   }
   .wrapper i:first-child{
+    
     left: -22px;
     display: none;
   }
@@ -192,16 +197,19 @@ section{
     scroll-behavior: auto;
   }
   .carousel.dragging img{
+    
     pointer-events: none;
   }
-  .carousel img{
+  .carousel img {
     height: 520px;
     object-fit: cover;
     user-select: none;
     margin-left: 14px;
     width: calc(100% / 3);
+}
 
-  }
+
+
   .carousel img:first-child{
     margin-left: 0px;
   }
