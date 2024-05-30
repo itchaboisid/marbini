@@ -1,0 +1,228 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  nav{
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111010;
+    position: relative;
+    height: 70px;
+  }
+  
+  .logo {
+    color: #333;
+    font-size: x-large;
+    text-decoration: none;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.5s ease; /* Add transitions for smooth scaling, rotation, and color change */
+}
+
+.logo:hover {
+    transform: scale(1.1) translateX(10px); /* Scale the logo slightly and translate it horizontally on hover */
+    color: #ff69b4; /* Change color on hover */
+}
+  .logo .log {
+    font-weight: 900;
+    color: #fff;
+    text-decoration: none;
+
+  }
+  
+  nav ul{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    text-align: left;
+
+  }
+  
+  nav ul li{
+    list-style-type: none;
+        transition: transform 0.3s ease; /* Add smooth transition for scale */
+
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease; /* Add smooth transition for color */
+}
+
+nav ul li a:hover {
+    color: #ccc; /* Change color on hover */
+}
+
+
+
+  nav .admin{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #333;
+    background: #ffffff56;
+    text-decoration: none;
+    transition: transform 0.3s ease; /* Add smooth transition for transform */
+
+}
+nav .admin:hover {
+    transform: scale(1.10); /* Scale up by 5% on hover */
+}
+  .menu-icon{
+    display: none;
+  }
+  
+  .menu-icon i{
+    color: #fff;
+    font-size: 30px;
+  }
+
+  .about-us{
+    height :90vh;
+    width: 100%;
+    padding: 145px 0;
+  }
+  .pic {
+    border-radius: 15rem;
+    height: auto;
+    width: 360px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Adjust the color and intensity as needed */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for scaling and shadow */
+  }
+  
+  .pic:hover {
+    transform: scale(1.1); /* Scale up the image on hover */
+    box-shadow: 0 0 30px rgba(255, 255, 255, 1); /* Enhance the shadow on hover */
+  }
+  
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .about {
+    color: white;
+    width: 1130px;
+    max-width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    animation: slideIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
+  
+  
+  .text{
+    width: 540px;
+  }
+  .text h2{
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .text h5{
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  span{
+    color: #4070f4;
+  }
+  .text p{
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 1px;
+  }
+  .data{
+    margin-top: 30px;
+  }
+  .hire{
+    font-size: 18px;
+    background: #505052;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 6px;
+    transition: 0.5s;
+  }
+  .hire:hover{
+    background: #000;
+    border: 1px solid #ffffff;
+  }
+
+@media screen and (max-width: 768px) {
+
+    nav {
+      position: relative; /* Change position to relative */
+      z-index: 1000; /* Set a high z-index value */
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #202122;
+      height: 70px;
+  }
+  
+  nav ul {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      text-align: center;
+      background: #020202d0;
+      gap: 0;
+      overflow: hidden;
+      z-index: 999; /* Set a z-index value lower than nav */
+      border-radius: 0px 0px 22px 20px;
+  
+  }
+  
+  nav ul li {
+      padding: 25px;
+      padding-top: 15px;
+    }
+  
+  .menu-icon {
+      display: block;
+  }
+  
+  #menuList {
+      transition: all 0.5s;
+  }
+  .about-us {
+    min-height: 120vh; /* Ensure the section takes up the full viewport height */
+    padding: 30px 0; /* Adjust padding for spacing */
+    justify-content: center; /* Center content vertically */
+}
+
+.about {
+    flex-direction: column; /* Stack picture and text vertically */
+}
+
+.text {
+    font-size: 1rem;
+    margin: -10px;
+    font-size: 5px;
+    text-align: center; /* Center text */
+}
+.text p{
+    font-size: 12px;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+}

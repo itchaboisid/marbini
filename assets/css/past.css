@@ -85,11 +85,11 @@ nav{
     color: #fff;
     font-size: 30px;
   }
-.body {
+  .body {
     min-height: 90vh;
     width: 100%;
     font-size: 16px;
-    color: #777;
+    color: #fffdfd;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,15 +115,26 @@ nav{
 
 
 .item-container {
-    position: relative;
-    margin: 24px;
-    width: 320px;
-    height: 570px;
-    overflow: hidden;
-    background-color: #fff;
-    box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.15);
-    cursor: pointer;
+  position: relative;
+  margin: 24px;
+  width: 320px;
+  height: 570px;
+  overflow: hidden;
+  background-color: #141414ec;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  animation: glow 2s infinite alternate; /* Apply the glow animation */
 }
+
+@keyframes glow {
+  from {
+      box-shadow: 0 0 30px 5px rgba(240, 237, 237, 0.15); /* Start with the original shadow */
+  }
+  to {
+      box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.082); /* Transition to a larger, glowing shadow */
+  }
+}
+
 
 .img-container,
 .body-container {
@@ -146,7 +157,7 @@ nav{
     position: relative;
     width: 100%;
     height: 400px;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #141414ec;
     opacity: 0;
     transition: height linear 0.4s, opacity linear 0.2s;
 }
@@ -157,8 +168,8 @@ nav{
 }
 
 .event-info {
-    background-color: #fff;
-    display: flex;
+  background-color: #141414ec;
+  display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -167,7 +178,7 @@ nav{
 
 .title,
 .price {
-    color: #00080e;
+    color: #fffdfd;
     font-size: 1.5em;
     font-weight: bold;
     letter-spacing: 1px;
@@ -182,12 +193,12 @@ nav{
 .separator {
     width: 20%;
     height: 6px;
-    background-color: #000000;
+    background-color: #ffffff;
     margin-bottom: 16px;
 }
 
 .additional-info {
-    border-top: 1px solid #050000;
+    border-top: 1px solid #0c0b0b;
     margin-top: 12px;
     padding: 28px;
     padding-bottom: 0;
@@ -200,18 +211,18 @@ nav{
 }
 
 .info i {
-    color: #00090f;
+    color: #f3f3f3;
     font-size: 1.1em;
     margin-right: 4px;
 }
 
 .info span {
-    color: #050505;
+    color: #ffffff;
     font-weight: bolder;
 }
 
 .action {
-    color: #0e0d0d;
+    color: #111010;
     border: 3px solid #fff;
     background-color: transparent;
     position: absolute;
@@ -230,7 +241,7 @@ nav{
 }
 .action a{
     text-decoration: none;
-    color: white;
+    color: rgb(250, 248, 248);
 }
 
 .item-container:hover .action {
@@ -238,7 +249,7 @@ nav{
 }
 
 .action:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #141414fa;
 }
 @media screen and (max-width: 768px) {
 

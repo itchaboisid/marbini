@@ -154,11 +154,25 @@ nav .admin:hover {
   font-size: 55px;
   font-weight: 600;
   color: #fff;
+  animation: glowText 5s infinite alternate; /* Apply the glow animation */
+
 }
-.image-data h2 span{
+.image-data h2 span {
   font-style: italic;
   font-size: 70px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add a subtle text-shadow */
+  animation: glowText 5s infinite alternate; /* Apply the glow animation */
 }
+
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Start with the original text-shadow */
+  }
+  to {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Transition to a larger, glowing text-shadow */
+  }
+}
+
 .image-data p {
   -webkit-text-stroke: 0px black; /* Add a black border to each letter */
 

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/ByLaws.css" />
+    <link rel="icon" type="image/png" href="/images/logo.png"/>
+
+    <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+    <style>
+      body{
+        background-image: url(/images/Likha\ Back.png);
+        background-size: cover;
+        height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+      }body{
+        background-image: url(/images/Likha\ Back.png);
+        background-size: cover;
+        height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+      }
+    </style>
+    <title>ByLaws</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a class="log" href="/index.html">Unified Campus Connection</a>
+      </div>  
+      <ul id="menuList">
+        <li><a href="About Us.html"> About Us</a></li>
+
+        <li><a href="About Us.html"> ByLaws</a></li>
+
+        <li class="admin"><a href="Homepage.html">Club Infos</a></li>
+      </ul>
+      <div class="menu-icon">
+          <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
+      <script>
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+
+        function toggleMenu(){
+            if(menuList.style.maxHeight == "0px")
+            {
+                menuList.style.maxHeight = "300px";
+            }
+            else{
+                menuList.style.maxHeight = "0px";
+            }
+        }
+        
+    </script>
+  </nav>
+  <section class="about-us">
+    <div class="about">
+      <img src="/images/Lugo.png" class="pic">
+      <div class="text">
+        <h2>ByLaws</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita natus ad sed harum itaque ullam enim quas, veniam accusantium, quia animi id eos adipisci iusto molestias asperiores explicabo cum vero atque amet corporis! Soluta illum facere consequuntur magni. Ullam dolorem repudiandae cumque voluptate consequatur consectetur, eos provident necessitatibus reiciendis corrupti!</p>
+        <div class="data">
+        <a href="Likha Landing.html" class="hire">Go to Club!</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </body>
+</html>

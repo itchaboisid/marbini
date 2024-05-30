@@ -289,19 +289,23 @@ nav .admin:hover {
     margin-top: 40px;
 }
 
-#previous, #next {
-    font-weight: 400;
-    color: #fff;
+#previous,
+#next {
+    font-weight: 650;
+    color: hwb(0 95% 1%);
     background-color: rgba(189, 181, 181, 0.808);
     padding: 10px 20px;
     border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.3s ease; /* Add smooth transition for transform */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transitions for transform and box-shadow */
+    box-shadow: 0 0 3px rgba(189, 181, 181, 0.5); /* Add initial box-shadow for subtle glow */
 }
 
-#previous:hover, #next:hover {
+#previous:hover,
+#next:hover {
     background-color: rgba(189, 181, 181, 0.9); /* Adjust background color on hover */
     transform: scale(1.05); /* Scale up by 5% on hover */
+    box-shadow: 0 0 10px rgba(189, 181, 181, 0.8); /* Increase box-shadow size for glowing effect */
 }
 
 
